@@ -27,7 +27,7 @@ questões da Matemática de Ensino Médio e navegar até aonde
 o barco poder ir, nosso objetivo principal é agregar potencialidades
 do conteúdo no Ensino de Matemática
 
-Vamos explorar minhas cinco formas Desenvolver Matemática:
+Vamos explorar minhas cinco formas diferentes de Desenvolver Matemática:
 * Resolver todos os exercícios com Papel e Caneta
 * Resolver os mesmos exercícios com uso de calculadora científica
 * Resolver os exercícios com algorítmo em Python
