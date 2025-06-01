@@ -1,5 +1,5 @@
 # CWDA
-Bem vido ao Projeto CWDA:
+Bem vindo ao Projeto CWDA:
 Concise Way to Develop Arithmetics
 
 Que aqui escolhi como Tradução pt-br ser
