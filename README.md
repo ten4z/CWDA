@@ -4,7 +4,7 @@ Concise Way to Develop Arithmetics
 
 Que aqui escolhi como Tradução pt-br ser
 tido estes termos como: 
-> ❝Modo interessante de Desenvolver Matemática❞ 
+> ❝Modo Interessante de Desenvolver Matemática❞ 
 
 
 Trata-se de um Projeto de Aplicação Cross-Platform escrito
