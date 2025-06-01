@@ -15,8 +15,8 @@ criar uma extensão para estudo e desenvolvimento da Física.
 
 E, se evoluirmos significativamente podemos verificar
 até onde podemos chegar com o conteúdo que produzirmos e,
-podemos investigar também a Física e Matemática de Ensino Superior
-no Entanto trata-se do caminho que trilharmos e 
+podemos investigar também a Física e Matemática de Ensino Superior.
+No entanto, trata-se do caminho que trilharmos e 
 da evolução e progresso do Projeto.
 
 Espero que eu possa contribuir desenvolvendo Ciência e Tecnologia,
