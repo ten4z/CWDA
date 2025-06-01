@@ -29,8 +29,8 @@ do conteúdo no Ensino de Matemática
 
 Vamos explorar minhas cinco formas diferentes de Desenvolver Matemática:
 * Resolver todos os exercícios com Papel e Caneta
-* Resolver os mesmos exercícios com uso de calculadora científica
+* Resolver os mesmos exercícios com uso de Calculadora Científica
 * Resolver os exercícios com algorítmo em Python
 * Resolver os exercícios com Software Matemático e Por fim,
 * Resolver todos os exercícios propostos no livro usando 
-uma combinação dos quatro métodos previamentes listados.
+uma Combinação dos quatro métodos previamentes listados.
