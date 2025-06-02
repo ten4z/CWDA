@@ -6,6 +6,9 @@
 	Sc_Menu:
 		id: sc_menu
 		name: "sc_menu"
+	Sc_Capitulos:
+		id: sc_capitulos
+		name: "sc_capitulos"
 	
 
 <Sc_Login>:
@@ -42,6 +45,9 @@
 <Sc_Menu>:
 	BoxLayout:
 		orientation: "vertical"
-		Label:
-			text: "Menu Principal"
+		Button:
+			text: "Seleção de Capítulos"
+			on_release: app.root.current = "sc_capitulos"
+
+
 	

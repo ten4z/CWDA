@@ -1,6 +1,7 @@
 from kivy.app import App 
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
+import scripts.capitulos as capitulos
 
 Builder.load_file("gui/principal.kv")
 
@@ -10,12 +11,16 @@ class Sc_Login(Screen):
 class Sc_Menu(Screen):
 	pass
 
+class Sc_Livros(Screen):
+	pass
+
 class Sc_Manager(ScreenManager):
 	pass
 
 class CWDA(App):
 	def build(self):
 		self.scm = Sc_Manager()
+		capitulos.leitura_cap01()
 		return self.scm
 
 
