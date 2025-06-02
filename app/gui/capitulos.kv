@@ -10,10 +10,17 @@
 			size_hint:1, None
             height:2000	
             BoxLayout:
-				orientation: "horizontal"
+				orientation: "vertical"
 				Label:
 					text: "Exercícios Capítulo 1"
-					bold: True		
+					bold: True	
+				BoxLayout:
+					orientation: "horizontal"
+					Button: 
+						text: "Voltar ao Menu Principal"
+						on_release: app.root.current = "sc_menu"
+					
+						
 			BoxLayout:
 				orientation: "horizontal"
 				Button:
