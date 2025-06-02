@@ -4,6 +4,9 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 
 Builder.load_file("gui/principal.kv")
 
+class Sc_Login(Screen):
+	pass
+
 class Sc_Menu(Screen):
 	pass
 

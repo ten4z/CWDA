@@ -1,9 +1,47 @@
 
 <Sc_Manager>:
+	Sc_Login:
+		id: sc_login
+		name: "sc_login"
 	Sc_Menu:
 		id: sc_menu
 		name: "sc_menu"
+	
+
+<Sc_Login>:
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Login de Usuário"
+			text_size: self.size
+			halign: "center"
+			bold: True
+		Label:
+			text: "Usuário ou E-mail"
+			text_size: self.size
+			halign: "left"
+		TextInput:			
+			hint_text: "Usuário"			
+		Label:
+			text: "Senha de Usuário"
+			text_size: self.size
+			halign: "left"
+		TextInput:			
+			hint_text: "Senha"
+			password: True
+			password_mask: "•"
+		Button:			
+			text: "Fazer Login"
+		Button:			
+			text: "Alterar Senha"		
+		Button:			
+			text: "Pular Login"
+			on_release:
+				app.root.current = "sc_menu"
 
 <Sc_Menu>:
-	Label:
-		text: "Menu Principal"
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Menu Principal"
+	
