@@ -24,7 +24,5 @@ class CWDA(App):
 		capitulos.leitura_cap01()
 		return self.scm
 
-
-
 if __name__ == "__main__":
 	CWDA().run()
