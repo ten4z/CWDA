@@ -4,7 +4,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 import scripts.capitulos as capitulos
 
 Builder.load_file("gui/principal.kv")
-Builder.load_file("gui/capitulos.kv")
+
 
 class Sc_Login(Screen):
 	pass

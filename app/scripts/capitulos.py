@@ -2,8 +2,7 @@ from kivy.app import App
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 
-
-Builder.load_file("gui/principal.kv")
+Builder.load_file("gui/capitulos.kv")
 
 class Sc_Capitulos(Screen):
 	def leitura_c1(self):
