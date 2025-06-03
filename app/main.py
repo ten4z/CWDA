@@ -3,8 +3,12 @@ from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 import scripts.capitulos as capitulos
 import sqlite3
+from kivy.lang.builder import Builder 
+
+
 
 Builder.load_file("gui/principal.kv")
+
 
 
 class Sc_Login(Screen):
