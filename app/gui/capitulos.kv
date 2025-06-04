@@ -10,10 +10,16 @@
 		size_hint_y: 1
 		BoxLayout:
 			orientation: 'vertical'
+			BoxLayout:				
+				orientation: "horizontal"
+				size_hint_y: 0.1
+				Label: 
+					text: "Exercícios Solucionados"
+					bold: True
 			BoxLayout:
 				adaptive_height: True
 				orientation: "horizontal"
-				size_hint_y: 0.2
+				size_hint_y: 0.1
 				
 				TextInput:
 					id: campo_busca
@@ -36,8 +42,8 @@
 						orientation: 'vertical'
 
 <ExercícioPopup>:
-	title: "Detalhes do Exercício"
-	id_exercicio: id_exercicio
+	title: "Detalhes do Exercício"	
+	txt_exercicio: txt_exercicio
 	txt_enunciado: txt_enunciado
 	id: exercicios_popup	
 	size_hint_x: 0.95
@@ -46,9 +52,10 @@
 		orientation: "vertical"
 		BoxLayout:
 			orientation: "vertical"
+			size_hint_y: 0.2
 			Label:
-				text: "Exercícios Capítulo 1"
-				bold: True	
+				text: "Exercícios Propostos"
+				bold: True				
 			BoxLayout:
 				orientation: "horizontal"
 				Button: 
@@ -58,18 +65,30 @@
 						exercicios_popup.dismiss()
 		BoxLayout:
 			orientation: "vertical"
+			size_hint_y: 0.8
 			BoxLayout:
 				orientation: "horizontal"
+				size_hint_y: 0.6
+				Label:
+					text: "Solução Completa Exercício 1"
+					id: txt_enunciado					
+					halign: "left"					
+					bold: True
+					size_hint_x: 0.2
+		            size_hint_y: None
+		            height: self.texture_size[1]
+		            text_size: self.width, None
+			BoxLayout:
+				orientation: "horizontal"
+				size_hint_y: 0.2
 				Button:
 					text: "Solução Completa Exercício 1"
-					id: txt_enunciado
-					size_hint_x: 0.9
-				Button:
-					text: "ID"
-					size_hint_x: 0.1
-					id: id_exercicio
+					id: txt_exercicio					
+				
+				
 			BoxLayout:
 				orientation: "horizontal"
+				size_hint_y: 0.2
 				Button:
 					text: "SM1"
 				Button:
