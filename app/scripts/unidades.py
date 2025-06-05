@@ -10,7 +10,7 @@ from kivy.uix.recycleview.layout import LayoutSelectionBehavior
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang.builder import Builder 
 from kivy.uix.button import Button
-from kivy.properties import ObjectProperty
+from kivy.properties import ObjectProperty, StringProperty, ListProperty
 
 
 class SelectableRecycleGridLayout(FocusBehavior, LayoutSelectionBehavior,
@@ -25,12 +25,14 @@ class SelectableButton(RecycleDataViewBehavior, Button):
 class ExercícioPopup(Popup): 
 	id_exercicio = ObjectProperty(None)
 	txt_exercicio = ObjectProperty(None)
-	txt_enunciado = ObjectProperty(None)
+	txt_enunciado = ObjectProperty(None)	
 	def __init__(self, obj, **kwargs):
 		super(ExercícioPopup, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
 		self.cursor = self.current_app.cursor
+		
+
 		sql = "SELECT  id, unidade, modulo, exercicio, enunciado, pagina FROM tb_exercicios Where (exercicio = ?) ORDER BY id ASC"""
 		self.cursor.execute(sql, (obj.text,))
 		exercicio = self.cursor.fetchone()
@@ -39,13 +41,13 @@ class ExercícioPopup(Popup):
 			self.txt_enunciado.text = str(exercicio[4])
 
 
-Builder.load_file("gui/capitulos.kv")
+Builder.load_file("gui/unidades.kv")
 
-class Sc_Capitulos(Screen):
+class Sc_Unidade1(Screen):
 	campo_busca = ObjectProperty(None)
 
 	def __init__(self, **kwargs):
-		super(Sc_Capitulos, self).__init__(**kwargs)
+		super(Sc_Unidade1, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 
 	def leitura_c1(self):
@@ -134,9 +136,30 @@ class Sc_Capitulos(Screen):
 		if len(data)==0 or data==None:
 			self.inserir_exercicios()
 
+class Sc_Unidade2(Screen):
+	pass
+
+class Sc_Unidade3(Screen):
+	pass
+
+class Sc_Unidade4(Screen):
+	pass
+
+class Sc_Unidade5(Screen):
+	pass
+
+class Sc_Unidade6(Screen):
+	pass
+
+class Sc_Unidade7(Screen):
+	pass
+
+class Sc_Unidade8(Screen):
+	pass	
+
 
 def leitura_cap01():
-	Sc_Capitulos().leitura_c1()
-	Sc_Capitulos().exercicios_c1()
-	Sc_Capitulos().solucao_exercicio("ex1", "m5")
+	Sc_Unidade1().leitura_c1()
+	Sc_Unidade1().exercicios_c1()
+	Sc_Unidade1().solucao_exercicio("ex1", "m5")
 

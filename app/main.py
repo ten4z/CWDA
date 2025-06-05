@@ -1,7 +1,7 @@
 from kivy.app import App 
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
-import scripts.capitulos as capitulos
+import scripts.unidades as unidades
 import sqlite3
 from kivy.lang.builder import Builder 
 
@@ -32,8 +32,7 @@ class CWDA(App):
 	cursor = conexao.cursor()
 
 	def build(self):
-		self.scm = Sc_Manager()
-		capitulos.leitura_cap01()
+		self.scm = Sc_Manager()		
 		return self.scm
 
 if __name__ == "__main__":

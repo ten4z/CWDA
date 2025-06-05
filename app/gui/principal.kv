@@ -2,12 +2,42 @@
 	Sc_Login:
 		id: sc_login
 		name: "sc_login"
+
 	Sc_Menu:
 		id: sc_menu
 		name: "sc_menu"
-	Sc_Capitulos:
-		id: sc_capitulos
-		name: "sc_capitulos"
+
+	Sc_Unidade1:
+		id: sc_unidade1
+		name: "sc_unidade1"
+
+	Sc_Unidade2:
+		id: sc_unidade2
+		name: "sc_unidade2"
+
+	Sc_Unidade3:
+		id: sc_unidade3
+		name: "sc_unidade3"
+
+	Sc_Unidade4:
+		id: sc_unidade4
+		name: "sc_unidade4"
+
+	Sc_Unidade5:
+		id: sc_unidade5
+		name: "sc_unidade5"
+
+	Sc_Unidade6:
+		id: sc_unidade6
+		name: "sc_unidade6"
+
+	Sc_Unidade7:
+		id: sc_unidade7
+		name: "sc_unidade7"
+
+	Sc_Unidade8:
+		id: sc_unidade8
+		name: "sc_unidade8"
 	
 <Sc_Login>:
 	BoxLayout:
@@ -47,12 +77,12 @@
 		BoxLayout:
 			orientation: "vertical"
 			size_hint:1, None
-            height:2000	
+            height:500	
             BoxLayout:
 				orientation: "vertical"
 				size_hint_y: 0.1        
 				Label:
-					text: "Capítulos do Livro"
+					text: "Sessões de Unidades"
 					bold: True					
 			BoxLayout:
 				orientation: "vertical"
@@ -60,23 +90,35 @@
 				Button:
 					text: "UNIDADE 1"
 					size_hint_y: 0.1
-					on_release: app.root.current = "sc_capitulos"
+					on_release: app.root.current = "sc_unidade1"
 				Button:
 					text: "UNIDADE 2"
 					size_hint_y: 0.1
-					on_release: app.root.current = "sc_capitulos"
+					on_release: app.root.current = "sc_unidade2"
 				Button:
 					text: "UNIDADE 3"
 					size_hint_y: 0.1
-					on_release: app.root.current = "sc_capitulos"
+					on_release: app.root.current = "sc_unidade3"
 				Button:
 					text: "UNIDADE 4"
 					size_hint_y: 0.1
-					on_release: app.root.current = "sc_capitulos"
+					on_release: app.root.current = "sc_unidade4"
 				Button:
 					text: "UNIDADE 5"
 					size_hint_y: 0.1
-					on_release: app.root.current = "sc_capitulos"
+					on_release: app.root.current = "sc_unidade5"
+				Button:
+					text: "UNIDADE 6"
+					size_hint_y: 0.1
+					on_release: app.root.current = "sc_unidade6"
+				Button:
+					text: "UNIDADE 7"
+					size_hint_y: 0.1
+					on_release: app.root.current = "sc_unidade7"
+				Button:
+					text: "UNIDADE 8"
+					size_hint_y: 0.1
+					on_release: app.root.current = "sc_unidade8"
 			BoxLayout:
 				orientation: "horizontal"
 				size_hint_y: 0.1

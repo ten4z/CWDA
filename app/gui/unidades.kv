@@ -1,6 +1,6 @@
-<Sc_Capitulos>:
-	id: sc_capitulos
-	name: "sc_capitulos"
+<Sc_Unidade1>:
+	id: sc_unidade1
+	name: "sc_unidade1"
 	campo_busca: campo_busca
 	
 	background_color: "#5EE799"
@@ -40,6 +40,80 @@
 						spacing: "5dp"
 						height: self.minimum_height
 						orientation: 'vertical'
+			BoxLayout:				
+				orientation: "vertical"
+				size_hint_y: 0.1
+				Button: 
+					text: "Voltar ao Menu Principal"
+					on_release: 
+						app.root.current = "sc_menu"
+
+<Sc_Unidade2>:
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Unidade 2"
+		Button: 
+			text: "Voltar ao Menu Principal"
+			on_release: 
+				app.root.current = "sc_menu"
+
+<Sc_Unidade3>:
+	BoxLayout:
+		orientation: "vertical"	
+		Label:
+			text: "Unidade 3"
+		Button: 
+			text: "Voltar ao Menu Principal"
+			on_release: 
+				app.root.current = "sc_menu"
+
+<Sc_Unidade4>:
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Unidade 4"
+		Button: 
+			text: "Voltar ao Menu Principal"
+			on_release: 
+				app.root.current = "sc_menu"
+
+<Sc_Unidade5>:
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Unidade 5"
+		Button: 
+			text: "Voltar ao Menu Principal"
+			on_release: 
+				app.root.current = "sc_menu"
+<Sc_Unidade6>:
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Unidade 6"
+		Button: 
+			text: "Voltar ao Menu Principal"
+			on_release: 
+				app.root.current = "sc_menu"
+<Sc_Unidade7>:
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Unidade 7"
+		Button: 
+			text: "Voltar ao Menu Principal"
+			on_release: 
+				app.root.current = "sc_menu"
+<Sc_Unidade8>:
+	BoxLayout:
+		orientation: "vertical"
+		Label:
+			text: "Unidade 8"
+		Button: 
+			text: "Voltar ao Menu Principal"
+			on_release: 
+				app.root.current = "sc_menu"								
 
 <ExercícioPopup>:
 	title: "Detalhes do Exercício"	
@@ -75,9 +149,9 @@
 					halign: "left"					
 					bold: True
 					size_hint_x: 0.2
-		            size_hint_y: None
-		            height: self.texture_size[1]
-		            text_size: self.width, None
+					size_hint_y: None
+					height: self.texture_size[1]
+					text_size: self.width, None
 			BoxLayout:
 				orientation: "horizontal"
 				size_hint_y: 0.2
