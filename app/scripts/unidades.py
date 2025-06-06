@@ -31,6 +31,16 @@ class SolucaoM2Button(Button):
 		pop_m2 = SolucaoM2Popup()
 		pop_m2.open() 
 
+class SolucaoM3Button(Button):
+	def on_press(self):		
+		pop_m3 = SolucaoM3Popup()
+		pop_m3.open() 
+
+class SolucaoM4Button(Button):
+	def on_press(self):		
+		pop_m4 = SolucaoM4Popup()
+		pop_m4.open()
+
 class ExercicioPopup(Popup): 
 	id_exercicio = ObjectProperty(None)
 	txt_exercicio = ObjectProperty(None)
@@ -56,7 +66,7 @@ class SolucaoM1Popup(Popup):
 	pass
 
 class SolucaoM2Popup(Popup): 
-	so1_m2 = """
+	so_ex1_m2 = """
 Para Resolver siga os seguintes passsos:\n
 X = 0.6666\n
 No gráfico da Imagem podemos ver que o valor X está entre os números 0 e 1, ou seja \n
@@ -92,6 +102,24 @@ que F é maior  que E. Logo podemos afirmar que a variável F é o número dado 
 F = 0.66666... resposta: letra C.\n
 """
 
+class SolucaoM3Popup(Popup): 
+	so_ex1_m3 = """
+Solução com Algoritmo em Python
+"""
+class SolucaoM4Popup(Popup): 
+	so_ex1_m4 = """
+Para Resolver siga os seguintes passsos:\n
+Na interface do Software Matemático Geogebra versão Classic 5.2\n
+Adicione os pontos visualmente com as ferramentas de criação do software\n
+e compare e intuitivamente verifique a localização do número dado\n
+no plano cartesiano e eixo horizontal conforme ilustra a figura do enunciado.\n
+Faça o seguinte: Acessando a função a função Segmento e visualmente clicando\n
+no ponto 0 em seguida clicando no ponto C teremos o comprimento\n
+n = 0.66666 que arredondado para cima n = 0.67 ou tambem,\n
+Acessando o campo de entrada e digitando o seguinte comando Distância((0.0), C)\n
+também teremos o valor de n2 = 0.67.\n
+Opcionalmente você pode acessar o arquivo diretamente no Software Geogebra.\n
+"""
 
 Builder.load_file("gui/unidades.kv")
 
