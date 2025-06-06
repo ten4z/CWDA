@@ -104,7 +104,18 @@ F = 0.66666... resposta: letra C.\n
 
 class SolucaoM3Popup(Popup): 
 	so_ex1_m3 = """
-Solução com Algoritmo em Python
+'''
+Para Resolver siga os seguintes passos:
+No Editor de Código de sua Preferência digite
+o seguinte código: 
+'''
+import kivy	
+print('algoritmo em python')
+'''
+e salve com a extensão .py
+em seguida no seu sistema Operacional carregue
+o arquivo que você editou em um interpretado de Python
+'''
 """
 class SolucaoM4Popup(Popup): 
 	so_ex1_m4 = """
