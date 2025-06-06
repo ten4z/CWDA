@@ -27,7 +27,7 @@
 					id: campo_busca
 					hint_text: 'Buscar Exercício'
 					on_text: root.buscar_exercicio(campo_busca.text, True)
-			
+
 			BoxLayout:				
 				orientation: "vertical"
 				size_hint_y: 0.7
@@ -117,9 +117,11 @@
 		Button: 
 			text: "Voltar ao Menu Principal"
 			on_release: 
-				app.root.current = "sc_menu"								
+				app.root.current = "sc_menu"	
 
-<ExercícioPopup>:
+
+
+<ExercicioPopup>:
 	title: "Detalhes do Exercício"	
 	txt_exercicio: txt_exercicio
 	txt_enunciado: txt_enunciado
@@ -146,7 +148,7 @@
 			size_hint_y: 0.8
 			BoxLayout:
 				orientation: "horizontal"
-				size_hint_y: 0.6
+				size_hint_y: 0.5
 				Label:
 					text: "Solução Completa Exercício 1"
 					id: txt_enunciado					
@@ -156,6 +158,18 @@
 					size_hint_y: None
 					height: self.texture_size[1]
 					text_size: self.width, None
+			BoxLayout:		        
+				orientation: 'vertical'
+				ScrollView:						
+					ScatterLayout:
+					    size: img.size
+					    size_hint: (None,None)
+					    Image:
+					    	id: img
+					        source: "data\imagens\img-un1-ex1.png"
+							size_hint: None, None
+							size: 480, 250 
+
 			BoxLayout:
 				orientation: "horizontal"
 				size_hint_y: 0.2
@@ -175,3 +189,4 @@
 					text: "SM3"
 				Button:
 					text: "SM4"
+<SolucaoPopup>

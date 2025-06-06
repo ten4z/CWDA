@@ -19,15 +19,15 @@ class SelectableRecycleGridLayout(FocusBehavior, LayoutSelectionBehavior,
 class SelectableButton(RecycleDataViewBehavior, Button):
 	def on_press(self):
 		
-		popup = ExercícioPopup(self)
+		popup = ExercicioPopup(self)
 		popup.open() 
 
-class ExercícioPopup(Popup): 
+class ExercicioPopup(Popup): 
 	id_exercicio = ObjectProperty(None)
 	txt_exercicio = ObjectProperty(None)
 	txt_enunciado = ObjectProperty(None)	
 	def __init__(self, obj, **kwargs):
-		super(ExercícioPopup, self).__init__(**kwargs)
+		super(ExercicioPopup, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
 		self.cursor = self.current_app.cursor
@@ -39,6 +39,9 @@ class ExercícioPopup(Popup):
 		if exercicio is not None: 			
 			self.txt_exercicio.text = "Ler Solução Ex. " + str(exercicio[0])			
 			self.txt_enunciado.text = str(exercicio[4])
+
+class SolucaoCompletaPopup(Popup): 
+	pass
 
 
 Builder.load_file("gui/unidades.kv")
@@ -87,7 +90,7 @@ class Sc_Unidade1(Screen):
 			rows = self.current_app.cursor.fetchall()
 			for conteudo in rows:
 				if search:
-					if text.lower() in conteudo[3].lower() or text.lower() in conteudo[3].lower():
+					if text in conteudo[3].lower() or text.lower() in conteudo[3].lower():
 						selecionar_exercicio(conteudo[2])
 				else:
 					selecionar_exercicio(conteudo[2])
