@@ -87,7 +87,7 @@ class Sc_Unidade1(Screen):
 			rows = self.current_app.cursor.fetchall()
 			for conteudo in rows:
 				if search:
-					if text.lower() in conteudo[2].lower() or text.lower() in conteudo[2].lower():
+					if text.lower() in conteudo[3].lower() or text.lower() in conteudo[3].lower():
 						selecionar_exercicio(conteudo[2])
 				else:
 					selecionar_exercicio(conteudo[2])
