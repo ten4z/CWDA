@@ -4,7 +4,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 import scripts.unidades as unidades
 import sqlite3
 from kivy.lang.builder import Builder 
-
+from kivy.core.window import Window
 
 
 Builder.load_file("gui/principal.kv")
@@ -32,6 +32,7 @@ class CWDA(App):
 	cursor = conexao.cursor()
 
 	def build(self):
+		Window.size = (360, 640)
 		self.scm = Sc_Manager()		
 		return self.scm
 

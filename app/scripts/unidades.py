@@ -26,6 +26,11 @@ class SolucaoM1Button(Button):
 		pop_m1 = SolucaoM1Popup()
 		pop_m1.open() 
 
+class SolucaoM2Button(Button):
+	def on_press(self):		
+		pop_m2 = SolucaoM2Popup()
+		pop_m2.open() 
+
 class ExercicioPopup(Popup): 
 	id_exercicio = ObjectProperty(None)
 	txt_exercicio = ObjectProperty(None)
@@ -49,6 +54,43 @@ class SolucaoCompPopup(Popup):
 
 class SolucaoM1Popup(Popup): 
 	pass
+
+class SolucaoM2Popup(Popup): 
+	so1_m2 = """
+Para Resolver siga os seguintes passsos:\n
+X = 0.6666\n
+No gráfico da Imagem podemos ver que o valor X está entre os números 0 e 1, ou seja \n
+0 < 0.666 < 1, pois bem, há dois valores numéricos entre 0 e 1, um menor que o outro, portando,\n
+visualmente podemos notar pela imagem que o primeiro valor está mais próximo de zero, e,\n
+visualmente também podemos verficar tambem que o segundo número está mais próximo de 1,\n
+Na opção de comparar valores e variáveis da memória da calculadora com a função VERIFY\n
+há duas opções lógicas de saída TRUE quando é Verdadeiro e FALSE quando o resultado é Falso.
+Aqui nesta solução por conta das 9 variáveis, temos o seguinte fato técnico: \n
+A letra ALPHA('X') não pode ser usada para armazenar na memória desta calculadora, portanto\n
+resta as outras 8 letras disponíveis disponíveis para cálculo nesta calculadora.\n
+Portanto, o primeiro valor será E que\n
+empiricamente adicionammos um valor E na memória sendo aproximadamente igual 0.4\n
+(0.4) depois pressione [SHIFT], [RCL] depois pressione [E]\n
+que armazena 0.4 na variável de memória E\n
+Mesmo sabendo que o segundo valor é muito maior que o primeiro valor\n
+Sabemos visualmente pela imagem do enunciado que (0.4) é maior que Zero, aqui\n
+o 'E' da memória da calculadora. Agora, estipulamos o valor F sendo igual a 0.41\n
+Digitamos (0.41) depois pressione [SHIFT], [RCL] depois pressione [F]\n
+e o segundo valor que está mais próximo de 1 será F usamos a função VERIFY da calculadora para comparar\n
+logicamente se E é maior que zero com os seguintes comandos etapas\n
+[MODE][5] VERIF seguido de [ALPHA][E] então pressione [SHIFT][2] e [SHIFT][3]\n
+Que se insere o simbolo de maior em seguida adicionamos [0] e [=] que retorna TRUE.\n
+Ou seja, é Verdade que (0.4), aqui o E é maior que 0, apenas como forma de comparação\n
+queremos que a calculadora mostre que (0.4) é menor que 1, então fazemos os passos\n
+[0.4] depois pressione [Shift], [RCL] depois pressione [E]\n
+[MODE][5] VERIF seguido de [ALPHA][E] então pressione [SHIFT][2] e [SHIFT][4]\n
+Que se insere o simbolo de menor em seguida adicionamos [1] e [=] que retorna TRUE.\n
+semelhante ao anterior que também retorna TRUE.\n
+Agora comparamos com verify se F é maior que E, que retorna TRUE.\n
+como F também é maior que zero e menor do que 1 e, na calculadora também mostrou com a comparação\n
+que F é maior  que E. Logo podemos afirmar que a variável F é o número dado no enunciado da questão. ou seja:\n
+F = 0.66666... resposta: letra C.\n
+"""
 
 
 Builder.load_file("gui/unidades.kv")
