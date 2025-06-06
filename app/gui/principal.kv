@@ -170,5 +170,11 @@
 				orientation: "horizontal"
 				size_hint_y: 0.1
 				Button: 
+					text: "Voltar ao Menu Principal"
+					on_release: app.root.current = "sc_home"
+			BoxLayout:
+				orientation: "horizontal"
+				size_hint_y: 0.1
+				Button: 
 					text: "Sair da Aplicação"
 					on_release: app.stop()
