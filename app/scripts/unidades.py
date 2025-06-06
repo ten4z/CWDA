@@ -17,10 +17,14 @@ class SelectableRecycleGridLayout(FocusBehavior, LayoutSelectionBehavior,
 				 RecycleGridLayout):
 	pass
 class SelectableButton(RecycleDataViewBehavior, Button):
-	def on_press(self):
-		
+	def on_press(self):		
 		popup = ExercicioPopup(self)
 		popup.open() 
+
+class SolucaoM1Button(Button):
+	def on_press(self):		
+		pop_m1 = SolucaoM1Popup()
+		pop_m1.open() 
 
 class ExercicioPopup(Popup): 
 	id_exercicio = ObjectProperty(None)
@@ -40,7 +44,10 @@ class ExercicioPopup(Popup):
 			self.txt_exercicio.text = "Ler Solução Ex. " + str(exercicio[0])			
 			self.txt_enunciado.text = str(exercicio[4])
 
-class SolucaoCompletaPopup(Popup): 
+class SolucaoCompPopup(Popup): 
+	pass
+
+class SolucaoM1Popup(Popup): 
 	pass
 
 
