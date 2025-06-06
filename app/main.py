@@ -17,6 +17,8 @@ class Sc_Login(Screen):
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
 		self.cursor = self.current_app.cursor
+class Sc_Home(Screen):
+	pass
 
 class Sc_Menu(Screen):
 	pass

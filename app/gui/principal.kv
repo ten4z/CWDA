@@ -1,4 +1,8 @@
 <Sc_Manager>:
+	Sc_Home:
+		id: sc_home
+		name: "sc_home"
+
 	Sc_Login:
 		id: sc_login
 		name: "sc_login"
@@ -38,7 +42,50 @@
 	Sc_Unidade8:
 		id: sc_unidade8
 		name: "sc_unidade8"
-	
+
+<Sc_Home>:
+	BoxLayout:
+		orientation: "vertical"
+		BoxLayout:
+			orientation: "vertical"
+			size_hint_y: 0.2
+			Label:
+				text: "App CWDA"
+				bold: True
+				font_size: "48sp"
+		BoxLayout:
+			orientation: "vertical"
+			size_hint_y: 0.2			
+			Label:				
+				text: "Concise Way to Develop Arithmetics"
+				text_size: self.size
+				halign: "center"
+				valign: "top"
+		BoxLayout:
+			orientation: "vertical"
+			size_hint_y: 0.2
+			AnchorLayout:
+		        anchor_x: 'center'
+		        anchor_y: 'center'
+		        Image:
+		            source: "data\imagens\icon.png"
+		            size_hint: None, None
+		            size: 400, 400	
+		BoxLayout:
+			orientation: "vertical"
+			size_hint_y: 0.2
+			Label:
+				text: "Vamos estudar e aprender neste  programa de estudo aqui um Modo Interessante de Desenvolver Matemática"				
+				text_size: self.size
+				halign: "center"
+				valign: "top"   					
+		BoxLayout:
+			orientation: "vertical"
+			size_hint_y: 0.2
+			Button: 
+				text: "Continuar"
+				on_release: app.root.current = "sc_menu"
+
 <Sc_Login>:
 	BoxLayout:
 		orientation: "vertical"
