@@ -29,6 +29,10 @@ class SelectableButton(RecycleDataViewBehavior, Button):
 	def on_press(self):		
 		popup = ExercicioPopup(self)
 		popup.open() 
+class SolucaoCompButton(Button):
+	def on_press(self):
+		pop_soc = SolucaoCompPopup()
+		pop_soc.open()
 
 class SolucaoM1Button(Button):
 	def on_press(self):		
@@ -221,6 +225,7 @@ class Sc_Unidade1(Screen):
 		data = self.current_app.cursor.fetchall()
 		if len(data)==0 or data==None:
 			self.inserir_exercicios()
+
 
 class Sc_Unidade2(Screen):
 	pass
