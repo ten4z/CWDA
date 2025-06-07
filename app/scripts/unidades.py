@@ -159,24 +159,6 @@ class Sc_Unidade1(Screen):
 		super(Sc_Unidade1, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 
-	def leitura_c1(self):
-		print("capitulo 1 página 1")
-
-	def exercicios_c1(self):
-		print("exercício página 20")
-
-	def solucao_exercicio(self, ex, md):		
-		if md == "m1":
-			print("solucionar exercício " +ex + " com papel e caneta")
-		elif md == "m2":
-			print("solucionar exercício " +ex + " com calculadora")
-		elif md == "m3":
-			print("solucionar exercício " +ex + " com algoritmo")
-		elif md == "m4":
-			print("solucionar exercício " +ex + " com software")
-		elif md == "m5":
-			print("solucionar exercício " +ex + " modo completo")
-
 	def on_enter(self): 
 		self.criar_tabelas()
 		self.buscar_exercicio("", True)		
@@ -261,7 +243,3 @@ class Sc_Unidade7(Screen):
 class Sc_Unidade8(Screen):
 	pass	
 
-def leitura_cap01():
-	Sc_Unidade1().leitura_c1()
-	Sc_Unidade1().exercicios_c1()
-	Sc_Unidade1().solucao_exercicio("ex1", "m5")
