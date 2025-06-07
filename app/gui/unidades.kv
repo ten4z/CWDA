@@ -1,3 +1,16 @@
+<ImageView>:
+	id: image_view
+	AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'top'							
+		ScatterLayout:
+		    size: img.size
+		    size_hint: (None,None)
+		    Image:
+		    	id: img
+		        source: image_view.imagem
+				size_hint: None, None
+				size: 480, 250 
 <Sc_Unidade1>:
 	id: sc_unidade1
 	name: "sc_unidade1"
@@ -123,6 +136,7 @@
 	title: "Detalhes do Exercício"	
 	txt_exercicio: txt_exercicio
 	txt_enunciado: txt_enunciado
+	image_layout: image_layout
 	id: exercicios_popup	
 	size_hint_x: 0.95
 	size_hint_y: 0.95
@@ -134,39 +148,35 @@
 			Label:
 				text: "Exercícios Propostos"
 				bold: True				
-			BoxLayout:
-				orientation: "horizontal"
-				Button: 
-					text: "Voltar ao Menu Anterior"
-					on_release: 
-						app.root.current = "sc_menu"
-						exercicios_popup.dismiss()
-		BoxLayout:
-			orientation: "vertical"
-			size_hint_y: 0.8
-			BoxLayout:
-				orientation: "horizontal"
-				size_hint_y: 0.5
-				Label:
-					text: "Solução Completa Exercício 1"
-					id: txt_enunciado					
-					halign: "left"					
-					bold: True
-					size_hint_x: 0.2
-					size_hint_y: None
-					height: self.texture_size[1]
-					text_size: self.width, None
-			BoxLayout:		        
-				orientation: 'vertical'
-				ScrollView:						
-					ScatterLayout:
-					    size: img.size
-					    size_hint: (None,None)
-					    Image:
-					    	id: img
-					        source: "data\imagens\img-un1-ex1.png"
-							size_hint: None, None
-							size: 480, 250 
+			
+		BoxLayout:		        
+			orientation: 'vertical'
+			size_hint_y: 1
+			ScrollView:				
+				do_scroll_y: True
+				scroll_y: 1
+				size_hint_y: 1.25	
+				size: 1, 1.25							
+				BoxLayout:		        
+					orientation: 'vertical'	
+					size_hint_y: 1.25
+					height: 1000													   
+					Label:
+						text_size: self.size
+    					halign: 'left'
+    					valign: 'top'
+						size_hint: 1, 1
+    					size: self.texture_size
+						text: "Solução Completa Exercício 1"
+						id: txt_enunciado					
+						bold: True
+												
+					BoxLayout:
+						orientation: "vertical"	
+						id: image_layout
+						
+											
+						
 			BoxLayout:
 				orientation: "horizontal"
 				size_hint_y: 0.2
@@ -184,6 +194,14 @@
 					text: "SM3"
 				SolucaoM4Button:
 					text: "SM4"
+			BoxLayout:
+				orientation: "horizontal"
+				size_hint_y: 0.2
+				Button: 
+					text: "Voltar ao Menu Anterior"
+					on_release: 
+						app.root.current = "sc_menu"
+						exercicios_popup.dismiss()
 
 <SolucaoM1Popup>:
 	id: ex_so_m1
@@ -204,7 +222,7 @@
 				    size_hint: (None,None)
 				    Image:
 				    	id: img
-				        source: "data\imagens\img-un1-so1-m1.png"
+				        source: "data/imagens/img-un1-so1-m1.png"
 						size_hint: None, None
 						size: 480, 250 
 		BoxLayout:		        

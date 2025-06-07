@@ -10,7 +10,16 @@ from kivy.uix.recycleview.layout import LayoutSelectionBehavior
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang.builder import Builder 
 from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, ListProperty
+
+class ImageView(BoxLayout):
+	imagem = StringProperty("")
+	def __init__(self, **kwargs):
+		super(ImageView, self).__init__(**kwargs)
+		self.current_app = App.get_running_app()
+		self.conexao = self.current_app.conexao
+		self.cursor = self.current_app.cursor		
 
 
 class SelectableRecycleGridLayout(FocusBehavior, LayoutSelectionBehavior,
@@ -45,19 +54,34 @@ class ExercicioPopup(Popup):
 	id_exercicio = ObjectProperty(None)
 	txt_exercicio = ObjectProperty(None)
 	txt_enunciado = ObjectProperty(None)	
+	image_layout = ObjectProperty(None)	
+	imagem = StringProperty("")
+	img_view = None
 	def __init__(self, obj, **kwargs):
 		super(ExercicioPopup, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
-		self.cursor = self.current_app.cursor
+		self.cursor = self.current_app.cursor		
 		
-
-		sql = "SELECT  id, unidade, modulo, exercicio, enunciado, pagina FROM tb_exercicios Where (exercicio = ?) ORDER BY id ASC"""
+		
+		sql = "SELECT  id, unidade, modulo, exercicio, enunciado, imagem, pagina FROM tb_exercicios Where (exercicio = ?) ORDER BY id ASC"""
 		self.cursor.execute(sql, (obj.text,))
 		exercicio = self.cursor.fetchone()
 		if exercicio is not None: 			
 			self.txt_exercicio.text = "Ler Solução Ex. " + str(exercicio[0])			
 			self.txt_enunciado.text = str(exercicio[4])
+			self.imagem = str(exercicio[5])
+		
+		self.img_view = ImageView()
+		
+		if self.imagem is not None or self.imagem != "":
+			self.img_view.imagem = self.imagem
+			self.image_layout.add_widget(self.img_view)
+		else:			
+			self.img_view.source = ""
+			self.image_layout.remove_widget(self.img_view)
+			
+		
 
 class SolucaoCompPopup(Popup): 
 	pass
@@ -194,7 +218,7 @@ class Sc_Unidade1(Screen):
 		self.current_app.conexao.commit()
 
 	def inserir_exercicios(self):		
-		lista = [[1, 1, 1, 'imagem 1','Exercício 1', '1. O número 0,666... é igual a uma certa fração f. Essa fração está representada na reta numérica abaixo: O ponto que representa a fração é: \na) A. b) B. c) C. d) D.',10],[2, 1,1, 'Nenhuma', 'Exercício 2', '2. Numa classe de 8ª série com 40 alunos, foram arrecadados R$ 2.749,60 para as comemorações da formatura. As despesas foram as seguintes: R$ 754,15 para o conjunto musical, R$ 285,35 para os enfeites da igreja e do salão de baile e R$ 880,50 para a excursão. A sobra foi repartida igualmente entre os alunos dessa classe. Quanto cada aluno recebeu? \na) R$ 116,74 b) R$ 82,96 c) R$ 48,00 d)R$ 20,74 ', 10],[3, 1, 1, 'imagem','Exercício 3.','3. A prefeitura de uma determinada cidade sorteou 120 apartamentos em um sistema de casas populares. Três grupos inscreveram-se nesse programa: grupo A de funcionários da prefeitura; grupo B de moradores com renda mensal abaixo de 2 salários mínimos; grupo c de moradores com renda mensal de 2 a 3 salários mínimos. Desse total, 1/4 dos apartamentos foram destinado para o grupo A e 1/3 para o grupo B. Sabendo que o restante era para o grupo C, qua a fração correspondente a ele: \n a) 2/7 b)5/7 c) 5/12 d) 7/12', 10],[4,1, 1, 'imagem','Exercício 4','4. Calculando se √30, obtém se 5,4772255..., número que tem representação decimal finita, mas não é dízima periódica. Conclui-se então que √30 é um número: \n a) natural. b) inteiro. c) racional. d) irracional. ', 11],[5, 1 ,1,'imagem', 'Exercício 5', '5. Simplificando a expressão √(62 + √(1 + √9)), obtemos: \na) 6. b) 8. c) 16. d) √40.',12]]
+		lista = [[1, 1, 1, 'data/imagens/img-un1-ex1.png','Exercício 1', '1. O número 0,666... é igual a uma certa fração f. Essa fração está representada na reta numérica abaixo: O ponto que representa a fração é: \na) A. b) B. c) C. d) D.',10],[2, 1,1, '', 'Exercício 2', '2. Numa classe de 8ª série com 40 alunos, foram arrecadados R$ 2.749,60 para as comemorações da formatura. As despesas foram as seguintes: R$ 754,15 para o conjunto musical, R$ 285,35 para os enfeites da igreja e do salão de baile e R$ 880,50 para a excursão. A sobra foi repartida igualmente entre os alunos dessa classe. Quanto cada aluno recebeu? \na) R$ 116,74 b) R$ 82,96 c) R$ 48,00 d)R$ 20,74 ', 10],[3, 1, 1, '','Exercício 3.','3. A prefeitura de uma determinada cidade sorteou 120 apartamentos em um sistema de casas populares. Três grupos inscreveram-se nesse programa: grupo A de funcionários da prefeitura; grupo B de moradores com renda mensal abaixo de 2 salários mínimos; grupo c de moradores com renda mensal de 2 a 3 salários mínimos. Desse total, 1/4 dos apartamentos foram destinado para o grupo A e 1/3 para o grupo B. Sabendo que o restante era para o grupo C, qua a fração correspondente a ele: \n a) 2/7 b)5/7 c) 5/12 d) 7/12', 10],[4,1, 1, '','Exercício 4','4. Calculando se √30, obtém se 5,4772255..., número que tem representação decimal finita, mas não é dízima periódica. Conclui-se então que √30 é um número: \n a) natural. b) inteiro. c) racional. d) irracional. ', 11],[5, 1 ,1,'', 'Exercício 5', '5. Simplificando a expressão √(62 + √(1 + √9)), obtemos: \na) 6. b) 8. c) 16. d) √40.',12]]
 
 		for item in lista:
 			
@@ -219,8 +243,7 @@ class Sc_Unidade1(Screen):
 		if len(data)==0 or data==None:
 			self.inserir_modulos()
 
-		sql_exercicio = "CREATE TABLE IF NOT EXISTS tb_exercicios(id integer PRIMARY KEY, unidade integer KEY, modulo integer KEY, exercicio text, imagem text, enunciado text NOT NULL, pagina text NOT NULL, FOREIGN KEY(unidade) REFERENCES tb_unidades(id_unidade), FOREIGN KEY(modulo) REFERENCES tb_modulos(id_modulo))"
-
+		sql_exercicio = "CREATE TABLE IF NOT EXISTS tb_exercicios(id integer PRIMARY KEY, unidade integer KEY, modulo integer KEY, exercicio text, imagem text, enunciado text NOT NULL, pagina text NOT NULL, FOREIGN KEY(unidade) REFERENCES tb_unidades(id_unidade), FOREIGN KEY(modulo) REFERENCES tb_modulos(id_modulo))"		
 		self.current_app.conexao.execute(sql_exercicio)
 		self.current_app.cursor.execute("SELECT * FROM tb_exercicios")
 		data = self.current_app.cursor.fetchall()
