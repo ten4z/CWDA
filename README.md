@@ -33,4 +33,5 @@ Vamos explorar minhas cinco formas diferentes de Desenvolver Matemática:
 * Resolver os exercícios com algorítmo em Python;
 * Resolver os exercícios com Software Matemático; e Por fim,
 * Resolver todos os exercícios propostos no livro usando 
-uma Combinação dos quatro métodos previamentes listados.
+uma Combinação dos quatro métodos previamentes listados, Aqui, a cargo do Leitor ou Aluno,
+pode escolher a melhor abordagem para resolver o Problema.
