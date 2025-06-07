@@ -6,10 +6,7 @@ import sqlite3
 from kivy.lang.builder import Builder 
 from kivy.core.window import Window
 
-
 Builder.load_file("gui/principal.kv")
-
-
 
 class Sc_Login(Screen):
 	def __init__(self, **kwargs):
@@ -17,6 +14,7 @@ class Sc_Login(Screen):
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
 		self.cursor = self.current_app.cursor
+		
 class Sc_Home(Screen):
 	pass
 
