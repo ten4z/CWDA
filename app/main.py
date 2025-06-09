@@ -32,7 +32,7 @@ class CWDA(App):
 	cursor = conexao.cursor()
 
 	def build(self):
-		Window.size = (360, 640)
+		Window.size = (853, 480) #landscape
 		self.scm = Sc_Manager()		
 		return self.scm
 
