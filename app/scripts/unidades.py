@@ -63,10 +63,7 @@ class ExercicioPopup(Popup):
 	active_accordion = ObjectProperty(None)
 	imagem = StringProperty("")
 	img_view = None
-	def on_open(self):
-		self.active_accordion.collapse = True
-		#acc = MDApp.get_running_app().root.get_screen("menu").ids["acc"]
-		#    acc.select(acc.children[-1]) 
+	def on_open(self):			
 		self.acc.select(self.acc.children[1]) 
 
 	def __init__(self, obj, **kwargs):
