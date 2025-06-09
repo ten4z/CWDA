@@ -55,8 +55,7 @@ class SolucaoM4Button(Button):
 		pop_m4.open()
 
 class ExercicioPopup(Popup): 
-	id_exercicio = ObjectProperty(None)
-	txt_exercicio = ObjectProperty(None)
+	id_exercicio = ObjectProperty(None)	
 	txt_enunciado = ObjectProperty(None)	
 	image_layout = ObjectProperty(None)	
 	acc = ObjectProperty(None)
@@ -75,8 +74,7 @@ class ExercicioPopup(Popup):
 		sql = "SELECT  id, unidade, modulo, exercicio, enunciado, imagem, pagina FROM tb_exercicios Where (exercicio = ?) ORDER BY id ASC"""
 		self.cursor.execute(sql, (obj.text,))
 		exercicio = self.cursor.fetchone()
-		if exercicio is not None: 			
-			self.txt_exercicio.text = "Ler Solução Ex. " + str(exercicio[0])			
+		if exercicio is not None: 						
 			self.txt_enunciado.text = str(exercicio[4])
 			self.imagem = str(exercicio[5])		
 		self.img_view = ImageView()		
