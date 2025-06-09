@@ -59,10 +59,19 @@ class ExercicioPopup(Popup):
 	txt_exercicio = ObjectProperty(None)
 	txt_enunciado = ObjectProperty(None)	
 	image_layout = ObjectProperty(None)	
+	acc = ObjectProperty(None)
+	active_accordion = ObjectProperty(None)
 	imagem = StringProperty("")
 	img_view = None
+	def on_open(self):
+		self.active_accordion.collapse = True
+		#acc = MDApp.get_running_app().root.get_screen("menu").ids["acc"]
+		#    acc.select(acc.children[-1]) 
+		self.acc.select(self.acc.children[1]) 
+
 	def __init__(self, obj, **kwargs):
 		super(ExercicioPopup, self).__init__(**kwargs)
+		
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
 		self.cursor = self.current_app.cursor						

@@ -3,6 +3,7 @@ from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 import scripts.unidades as unidades
 import sqlite3
+import webbrowser
 from kivy.lang.builder import Builder 
 from kivy.core.window import Window
 
@@ -30,6 +31,9 @@ class Sc_Manager(ScreenManager):
 class CWDA(App):
 	conexao = sqlite3.connect("media_data.db")
 	cursor = conexao.cursor()
+
+	def abrir_link(self, link):
+		webbrowser.open(link)
 
 	def build(self):
 		Window.size = (853, 480) #landscape

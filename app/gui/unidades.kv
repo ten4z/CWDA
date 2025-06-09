@@ -135,69 +135,125 @@
 	txt_exercicio: txt_exercicio
 	txt_enunciado: txt_enunciado
 	image_layout: image_layout
+	active_accordion: active_accordion
+	acc: acc
 	id: exercicios_popup	
 	size_hint_x: 0.95
 	size_hint_y: 0.95
 	BoxLayout:
-		orientation: "vertical"
-		BoxLayout:
-			orientation: "vertical"
-			size_hint_y: 0.2
-			Label:
-				text: "Exercícios Propostos"
-				bold: True	
-		BoxLayout:		        
-			orientation: 'vertical'
-			BoxLayout:		        
-				orientation: 'vertical'
-				size_hint_y: 0.1
-				Label:
-					text: "Solução Exercício 1 pelo Método 1"
-			BoxLayout:		        
-				orientation: 'vertical'
-				size_hint_y: 0.7
-				ScrollView:						
-					BoxLayout:
-						orientation: "vertical"
-						Label:
-							text_size: self.size
-							halign: 'left'
-							valign: 'top'
-							size_hint: 1, 1
-							size: self.texture_size
-							text: "Solução Completa Exercício 1"
-							id: txt_enunciado					
-							bold: True
-				ScrollView:						
-					ScatterLayout:
-					    size: 600, 600
-					    size_hint: (None,None)
-					    id: image_layout										
-			BoxLayout:
-				orientation: "horizontal"
-				size_hint_y: 0.2
-				SolucaoCompButton:
-					text: "Solução Completa Exercício 1"
-					id: txt_exercicio								
-			BoxLayout:
-				orientation: "horizontal"
-				size_hint_y: 0.2
-				SolucaoM1Button:
-					text: "SM1"
-				SolucaoM2Button:
-					text: "SM2"
-				SolucaoM3Button:
-					text: "SM3"
-				SolucaoM4Button:
-					text: "SM4"
-			BoxLayout:
-				orientation: "horizontal"
-				size_hint_y: 0.2
-				Button: 
-					text: "Voltar ao Menu Anterior"
-					on_release: 
-						app.root.current = "sc_menu"
-						exercicios_popup.dismiss()
+		orientation: "horizontal"
+		Accordion: 
+			id: acc
+			size_hint: 0.48, 1 
+			AccordionItem:				
+				BoxLayout:
+					orientation: "vertical"
+					Button: 
+						text: "MENU"
+						on_release: 
+							app.root.current = "sc_menu"
+							exercicios_popup.dismiss()
+					Button: 
+						text: "INÍCIO"
+						on_release: 
+							app.root.current = "sc_home"
+							exercicios_popup.dismiss()
+					Button: 
+						text: "UNIDADES"
+						on_release: 
+							app.root.current = "sc_menu"
+							exercicios_popup.dismiss()
+					Button: 
+						text: "SAIR"
+						on_release: 
+							app.stop()
+			AccordionItem:				
+				id: active_accordion
+				collapse: True
+				BoxLayout:
+					orientation: "horizontal"
+					
+					BoxLayout:		        
+						orientation: 'vertical'
+						BoxLayout:
+							orientation: "vertical"
+							size_hint_y: 0.2
+							Label:
+								text: "Exercícios Propostos"
+								bold: True	
+						BoxLayout:		        
+							orientation: 'vertical'
+							size_hint_y: 0.1
+							Label:
+								text: "Solução Exercício 1 pelo Método 1"
+						BoxLayout:		        
+							orientation: 'vertical'
+							size_hint_y: 0.7
+							ScrollView:						
+								BoxLayout:
+									orientation: "vertical"
+									Label:
+										text_size: self.size
+										halign: 'left'
+										valign: 'top'
+										size_hint: 1, 1
+										size: self.texture_size
+										text: "Solução Completa Exercício 1"
+										id: txt_enunciado					
+										bold: True
+							ScrollView:						
+								ScatterLayout:
+								    size: 600, 600
+								    size_hint: (None,None)
+								    id: image_layout										
+						BoxLayout:
+							orientation: "horizontal"
+							size_hint_y: 0.2
+							SolucaoCompButton:
+								text: "Solução Completa Exercício 1"
+								id: txt_exercicio								
+						BoxLayout:
+							orientation: "horizontal"
+							size_hint_y: 0.2
+							SolucaoM1Button:
+								text: "SM1"
+							SolucaoM2Button:
+								text: "SM2"
+							SolucaoM3Button:
+								text: "SM3"
+							SolucaoM4Button:
+								text: "SM4"
+						BoxLayout:
+							orientation: "horizontal"
+							size_hint_y: 0.2
+							Button: 
+								text: "Voltar ao Menu Anterior"
+								on_release: 
+									app.root.current = "sc_menu"
+									exercicios_popup.dismiss()
+			AccordionItem:				
+				BoxLayout:
+					orientation: "vertical"
+					Button:
+						text: "Política de Privacidade"
+						on_release: 
+							app.abrir_link("http://zigamultimeida.tech/documentos/tenaz-software-cwda.html")
+					Button:
+						text: "Avaliar esse App"
+						on_release: 
+							app.abrir_link("https://play.google.com/store/apps/details?id=com.tenazsoftware.cwda")
+					Button:
+						text: "Website do Ziga"
+						on_release: 
+							app.abrir_link("http://zigamultimedia.tech")
+					Button:
+						text: "Canal do Ziga"
+						on_release: 
+							app.abrir_link("https://www.youtube.com/channel/UCK-W5xN2tzIuovZr3DNydgw?sub_confirmation=1")
+
+
+
+		
 
 <SolucaoCompPopup>:
 	id: so_completa
