@@ -9,6 +9,9 @@ tido estes termos como:
 Trata-se de um Projeto de Aplicação Cross-Platform escrito
 em Python e uso do Framework Kivy.
 
+Consiste em um Guia Digital para Professores de Matemática e
+também um mergulho profundo dos alunos em Matemática, Ciência e Tecnologia.
+
 Vamos discutir temas da Matemática de Ensino Médio. 
 Dependendo da mídia que podermos produzir pretendo também 
 criar uma extensão para estudo e desenvolvimento da Física.
@@ -33,4 +36,4 @@ Vamos explorar minhas cinco formas diferentes de Desenvolver Matemática:
 * Resolver os exercícios com algorítmo em Python;
 * Resolver os exercícios com Software Matemático; e Por fim,
 * Resolver todos os exercícios propostos no livro usando 
-uma Combinação dos quatro métodos previamentes listados.
+uma Combinação dos quatro métodos previamentes listados - OPCIONAL: tarefa do aluno.
