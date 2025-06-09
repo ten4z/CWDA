@@ -61,7 +61,7 @@ class ExercicioPopup(Popup):
 	acc = ObjectProperty(None)
 	active_accordion = ObjectProperty(None)
 	imagem = StringProperty("")
-	img_view = None
+	img_view = ObjectProperty(None)
 	def on_open(self):			
 		self.acc.select(self.acc.children[1]) 
 
@@ -130,11 +130,12 @@ F = 0.66666... resposta: letra C.\n
 
 class SolucaoM3Popup(Popup): 
 	so_ex1_m3 = """
+'''
 Para Resolver siga os seguintes passos:
 No Editor de Código de sua Preferência digite
 o seguinte código: 
 '''
-n = 0.66666 # adicionado a variável n
+n = 0.6666 # adicionado a variável n
 v1 = 0 # 1º mais próximo de n
 v2 = 1 # 2º mais próximo de n
 '''
@@ -168,6 +169,7 @@ e a resposta está na letra 'C' da questão 1
 e salve com a extensão .py
 em seguida no seu sistema Operacional carregue
 o arquivo que você editou em um interpretado de Python
+'''
 """
 class SolucaoM4Popup(Popup): 
 	so_ex1_m4 = """
