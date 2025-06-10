@@ -37,6 +37,6 @@ e a resposta está na letra 'C' da questão 1
 '''
 e salve com a extensão .py
 em seguida no seu sistema Operacional carregue
-o arquivo que você editou em um interpretado de Python
+o arquivo que você editou em um interpretador de Python
 '''
 """
