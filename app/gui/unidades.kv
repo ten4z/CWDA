@@ -1,14 +1,14 @@
 <ImageView>:
 	id: image_view
 	AnchorLayout:
-        anchor_x: 'center'
-        anchor_y: 'top'							
+		anchor_x: 'center'
+		anchor_y: 'top'							
 		ScatterLayout:
-		    size: img.size
-		    size_hint: (None,None)
-		    Image:
-		    	id: img
-		        source: image_view.imagem
+			size: img.size
+			size_hint: (None,None)
+			Image:
+				id: img
+				source: image_view.imagem
 				size_hint: None, None
 				size: 480, 250
 
@@ -136,7 +136,9 @@
 	image_layout: image_layout
 	active_accordion: active_accordion
 	acc: acc
-	id: exercicios_popup	
+	buttons_layout: buttons_layout
+	id: exercicios_popup
+
 	size_hint_x: 0.95
 	size_hint_y: 0.95
 	BoxLayout:
@@ -197,9 +199,9 @@
 										bold: True
 							ScrollView:						
 								ScatterLayout:
-								    size: 600, 600
-								    size_hint: (None,None)
-								    id: image_layout										
+									size: 600, 600
+									size_hint: (None,None)
+									id: image_layout										
 						BoxLayout:
 							orientation: "horizontal"
 							size_hint_y: 0.2
@@ -207,15 +209,24 @@
 								text: "Fazer Minha Solução"
 						BoxLayout:
 							orientation: "horizontal"
+							
 							size_hint_y: 0.2
-							SolucaoM1Button:
-								text: "SM1"
-							SolucaoM2Button:
-								text: "SM2"
-							SolucaoM3Button:
-								text: "SM3"
-							SolucaoM4Button:
-								text: "SM4"
+							BoxLayout:
+								orientation: "vertical"
+								id: buttons_layout
+							BoxLayout:
+								orientation: "vertical"	
+								SolucaoM2Button:		
+									text: "SM2"				
+							BoxLayout:
+								orientation: "vertical"	
+								SolucaoM3Button:
+									text: "SM3"
+							BoxLayout:
+								orientation: "vertical"
+								SolucaoM4Button:
+									text: "SM4"
+							
 						BoxLayout:
 							orientation: "horizontal"
 							size_hint_y: 0.2
@@ -272,7 +283,8 @@
 					so_completa.dismiss()
 
 <SolucaoM1Popup>:
-	id: ex_so1_m1
+	id: ex_solucao
+	img: img
 	title: "Solução de Exercício"
 	BoxLayout:		        
 		orientation: 'vertical'
@@ -287,13 +299,13 @@
 			size_hint_y: 0.7
 			ScrollView:						
 				ScatterLayout:
-				    size: img.size
-				    size_hint: (None,None)
-				    Image:
-				    	id: img
-				        source: ex_so1_m1.so_ex1_m1
+					size: img.size
+					size_hint: (None,None)
+					Image:
+						id: img				    	
 						size_hint: None, None
 						size: 480, 250 
+						source: app.root.get_screen("sc_unidade1").ex_solucao
 		BoxLayout:		        
 			orientation: 'vertical'
 			size_hint_y: 0.1
@@ -305,7 +317,7 @@
 			Button: 
 				text: "Voltar"
 				on_release: 					
-					ex_so1_m1.dismiss()
+					ex_solucao.dismiss()
 
 
 <SolucaoM2Popup>:
@@ -337,10 +349,10 @@
 					height: 2000													   
 					Label:
 						text_size: self.size
-    					halign: 'left'
-    					valign: 'top'
+						halign: 'left'
+						valign: 'top'
 						size_hint: 1, 25.0
-    					size: self.texture_size
+						size: self.texture_size
 						text: ex_so_m2.so_ex1_m2
 		BoxLayout:
 			orientation: "horizontal"

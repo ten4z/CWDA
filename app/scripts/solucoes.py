@@ -92,3 +92,5 @@ Acessando o campo de entrada e digitando o seguinte comando Distância((0.0), C)
 também teremos o valor de n2 = 0.67.\n
 Opcionalmente você pode acessar o arquivo diretamente no Software Geogebra.\n
 """
+
+so_ex2_m1 = "data/imagens/img-un1-so2-m1.png"
