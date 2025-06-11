@@ -94,3 +94,6 @@ Opcionalmente você pode acessar o arquivo diretamente no Software Geogebra.\n
 """
 
 so_ex2_m1 = "data/imagens/img-un1-so2-m1.png"
+so_ex2_m2 = "solução exercício 2 método 2"
+so_ex2_m3 = "solução exercício 2 método 3"
+so_ex2_m4 = "solução exercício 2 método 4"

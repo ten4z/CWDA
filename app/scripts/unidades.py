@@ -71,10 +71,12 @@ class ExercicioPopup(Popup):
 	txt_enunciado = ObjectProperty(None)	
 	image_layout = ObjectProperty(None)	
 	buttons_layout = ObjectProperty(None)
+	arquivo_imagem = StringProperty("")
 	acc = ObjectProperty(None)
 	active_accordion = ObjectProperty(None)
 	imagem = StringProperty("")
 	img_view = ObjectProperty(None)
+	txt_reposta_m1 = StringProperty("")
 	def __init__(self, **kwargs):
 		super(ExercicioPopup, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
@@ -83,13 +85,19 @@ class ExercicioPopup(Popup):
 
 		self.acc.select(self.acc.children[1]) 
 
-	def btn_pressed(self,  callback):
-		print("press from button")
+	def btn_pop1(self,  callback):		
 		pop = SolucaoM1Popup()							
 		pop.img.source = self.imagem
 		print(self.imagem)
 
+	def btn_pop2(self,  callback):		
+		pop = SolucaoM2Popup()							
+		pop.label_so1.text = self.txt_reposta_m1
 		
+
+		
+	def selecionar_resposta(self, id_ex):
+		return "exercício2"
 
 	def __init__(self, obj, **kwargs):
 		super(ExercicioPopup, self).__init__(**kwargs)
@@ -97,26 +105,36 @@ class ExercicioPopup(Popup):
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
 		self.cursor = self.current_app.cursor						
-		sql = "SELECT  id, unidade, modulo, exercicio, enunciado, imagem, imagem_resposta, pagina FROM tb_exercicios Where (exercicio = ?) ORDER BY id ASC"""
+		sql = "SELECT  id, unidade, modulo, exercicio, enunciado, imagem, pagina FROM tb_exercicios WHERE (exercicio = ?) ORDER BY id ASC"""
 		self.cursor.execute(sql, (obj.text,))
 
 		exercicio = self.cursor.fetchone()
 		if exercicio is not None: 						
 			self.txt_enunciado.text = str(exercicio[4])
-			self.id_exercicio = str(exercicio[0])
+			self.id_exercicio = exercicio[0]
+			self.txt_reposta_m1 = self.selecionar_resposta(exercicio[3])
 
-			arquivo_imagem = str(exercicio[6])
-			if arquivo_imagem != "img-empty-image.png":
-				self.imagem = arquivo_imagem
-				self.current_app.scm.get_screen("sc_unidade1").ex_solucao = self.imagem
-			else:				
-				self.current_app.scm.get_screen("sc_unidade1").ex_solucao = "data/imagens/img-empty-image.png"
-			
+
+
+			#self.arquivo_imagem = str(exercicio[6])
+
+			sql = """SELECT  id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta FROM tb_respostas WHERE (id = ?)"""
+
+
+
+			self.cursor.execute(sql, (self.id_exercicio,))
+
+
+			rows = self.current_app.cursor.fetchall()
+			for conteudo in rows:
+				if conteudo[2] is not None: 
+					self.current_app.scm.get_screen("sc_unidade1").so_m1 = conteudo[2]
+					self.current_app.scm.get_screen("sc_unidade1").so_m2 = conteudo[3]
+					self.current_app.scm.get_screen("sc_unidade1").so_m3 = conteudo[4]
+					self.current_app.scm.get_screen("sc_unidade1").so_m4 = conteudo[5]	
 
 			s1 = SolucaoM1Button(text= "SM1")
-			s1.bind(on_release=self.btn_pressed)
-
-			
+			s1.bind(on_release=self.btn_pop1)	
 			self.buttons_layout.add_widget(s1)
 		
 			
@@ -156,6 +174,12 @@ Builder.load_file("gui/unidades.kv")
 class Sc_Unidade1(Screen):
 	campo_busca = ObjectProperty(None)
 	ex_solucao = StringProperty("")
+	so_ex1_m2 = StringProperty("")
+
+	so_m1 = StringProperty("")
+	so_m2 = StringProperty("")
+	so_m3 = StringProperty("")
+	so_m4 = StringProperty("")
 
 	def __init__(self, **kwargs):
 		super(Sc_Unidade1, self).__init__(**kwargs)
@@ -190,6 +214,23 @@ class Sc_Unidade1(Screen):
 		self.current_app.cursor.execute(sql)
 		self.current_app.conexao.commit()
 
+	def inserir_respostas(self):
+
+		lista = data.data_respostas
+
+		for item in lista:			
+			respostas_data = (item[0], item[1], item[2], item[3], item[4],item[5])
+
+			self.current_app.cursor.execute("INSERT INTO tb_respostas(id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta) VALUES (?, ?, ?, ?, ?, ?)", respostas_data,)
+
+
+
+
+
+			self.current_app.conexao.commit()
+
+		
+
 	def inserir_modulos(self):
 		sql = "INSERT INTO tb_modulos(id_modulo, titulo, paginas) VALUES (1, 'Revisão do Ensino Fundamental', 4)"
 		self.current_app.cursor.execute(sql)
@@ -199,8 +240,8 @@ class Sc_Unidade1(Screen):
 		lista = data.data_table
 
 		for item in lista:			
-			exercicios_data = (item[0], item[1], item[2], item[3], item[4], item[5], item[6], item[7])
-			self.current_app.cursor.execute("INSERT INTO tb_exercicios(id, unidade, modulo, imagem, imagem_resposta, exercicio, enunciado, pagina) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", exercicios_data)
+			exercicios_data = (item[0], item[1], item[2], item[3], item[4], item[5], item[6])
+			self.current_app.cursor.execute("INSERT INTO tb_exercicios(id, unidade, modulo, imagem,exercicio, enunciado, pagina) VALUES (?, ?, ?, ?, ?, ?, ?)", exercicios_data)
 			self.current_app.conexao.commit()
 			
 	def criar_tabelas(self):
@@ -211,18 +252,27 @@ class Sc_Unidade1(Screen):
 		data = self.current_app.cursor.fetchall()
 		if len(data)==0 or data==None:
 			self.inserir_unidades()
+
 		sql_modulo = "CREATE TABLE IF NOT EXISTS tb_modulos(id_modulo integer PRIMARY KEY, titulo text NOT NULL, paginas integer NOT NULL)"
 		self.current_app.conexao.execute(sql_modulo)
 		self.current_app.cursor.execute("SELECT * FROM tb_modulos")
 		data = self.current_app.cursor.fetchall()
 		if len(data)==0 or data==None:
 			self.inserir_modulos()
-		sql_exercicio = "CREATE TABLE IF NOT EXISTS tb_exercicios(id integer PRIMARY KEY, unidade integer KEY, modulo integer KEY, exercicio text, imagem text, imagem_resposta text, enunciado text NOT NULL, pagina text NOT NULL, FOREIGN KEY(unidade) REFERENCES tb_unidades(id_unidade), FOREIGN KEY(modulo) REFERENCES tb_modulos(id_modulo))"		
+
+		sql_exercicio = "CREATE TABLE IF NOT EXISTS tb_exercicios(id integer PRIMARY KEY, unidade integer KEY, modulo integer KEY, exercicio text, imagem text, enunciado text NOT NULL, pagina text NOT NULL, FOREIGN KEY(unidade) REFERENCES tb_unidades(id_unidade), FOREIGN KEY(modulo) REFERENCES tb_modulos(id_modulo))"		
 		self.current_app.conexao.execute(sql_exercicio)
 		self.current_app.cursor.execute("SELECT * FROM tb_exercicios")
 		data = self.current_app.cursor.fetchall()
 		if len(data)==0 or data==None:
 			self.inserir_exercicios()
+
+		sql_respostas = "CREATE TABLE IF NOT EXISTS tb_respostas(id integer PRIMARY KEY, id_exercicio integer KEY, imagem_resposta text, calculadora_resposta text, codigo_resposta text, software_resposta text, FOREIGN KEY(id_exercicio) REFERENCES tb_exercicios(id))"		
+		self.current_app.conexao.execute(sql_respostas)
+		self.current_app.cursor.execute("SELECT * FROM tb_respostas")
+		data = self.current_app.cursor.fetchall()
+		if len(data)==0 or data==None:
+			self.inserir_respostas()
 
 
 		

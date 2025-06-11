@@ -37,7 +37,6 @@
 					id: campo_busca
 					hint_text: 'Buscar Exercício'
 					on_text: root.buscar_exercicio(campo_busca.text, True)
-
 			BoxLayout:				
 				orientation: "vertical"
 				size_hint_y: 0.7
@@ -120,6 +119,7 @@
 			text: "Voltar ao Menu Anterior"
 			on_release: 
 				app.root.current = "sc_menu"
+
 <Sc_Unidade8>:
 	BoxLayout:
 		orientation: "vertical"
@@ -138,7 +138,6 @@
 	acc: acc
 	buttons_layout: buttons_layout
 	id: exercicios_popup
-
 	size_hint_x: 0.95
 	size_hint_y: 0.95
 	BoxLayout:
@@ -172,8 +171,7 @@
 				id: active_accordion
 				collapse: True
 				BoxLayout:
-					orientation: "horizontal"
-					
+					orientation: "horizontal"					
 					BoxLayout:		        
 						orientation: 'vertical'
 						BoxLayout:
@@ -201,7 +199,7 @@
 								ScatterLayout:
 									size: 600, 600
 									size_hint: (None,None)
-									id: image_layout										
+									id: image_layout		
 						BoxLayout:
 							orientation: "horizontal"
 							size_hint_y: 0.2
@@ -225,8 +223,7 @@
 							BoxLayout:
 								orientation: "vertical"
 								SolucaoM4Button:
-									text: "SM4"
-							
+									text: "SM4"							
 						BoxLayout:
 							orientation: "horizontal"
 							size_hint_y: 0.2
@@ -254,10 +251,6 @@
 						text: "Canal do Ziga"
 						on_release: 
 							app.abrir_link("https://www.youtube.com/channel/UCK-W5xN2tzIuovZr3DNydgw?sub_confirmation=1")
-
-
-
-		
 
 <SolucaoCompPopup>:
 	id: so_completa
@@ -305,7 +298,7 @@
 						id: img				    	
 						size_hint: None, None
 						size: 480, 250 
-						source: app.root.get_screen("sc_unidade1").ex_solucao
+						source: app.root.get_screen("sc_unidade1").so_m1
 		BoxLayout:		        
 			orientation: 'vertical'
 			size_hint_y: 0.1
@@ -319,9 +312,9 @@
 				on_release: 					
 					ex_solucao.dismiss()
 
-
 <SolucaoM2Popup>:
 	id: ex_so_m2
+	label_so1: label_so1
 	title: "Solução de Exercício"
 	BoxLayout:		        
 		orientation: 'vertical'
@@ -348,12 +341,13 @@
 					size_hint_y: 10
 					height: 2000													   
 					Label:
+						id: label_so1
 						text_size: self.size
 						halign: 'left'
 						valign: 'top'
 						size_hint: 1, 25.0
 						size: self.texture_size
-						text: ex_so_m2.so_ex1_m2
+						text: app.root.get_screen("sc_unidade1").so_m2
 		BoxLayout:
 			orientation: "horizontal"
 			size_hint_y: 0.2
@@ -385,7 +379,7 @@
 			size_hint_y: 0.7									
 			CodeInput:
 				readonly: True				
-				text: ex_so_m3.so_ex1_m3
+				text: app.root.get_screen("sc_unidade1").so_m3
 		BoxLayout:
 			orientation: "horizontal"
 			size_hint_y: 0.1
@@ -421,7 +415,7 @@
 					size_hint_y: 2.0
 					height: 3000						
 					Label:
-						text: ex_so_m4.so_ex1_m4
+						text: app.root.get_screen("sc_unidade1").so_m4
 						halign: "left"
 						valign: "top"
 						text_size: self.width, None				
