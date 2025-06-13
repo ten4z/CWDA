@@ -94,6 +94,7 @@ Opcionalmente você pode acessar o arquivo diretamente no Software Geogebra.\n
 """
 
 so_ex2_m1 = "data/imagens/img-un1-so2-m1.png"
+
 so_ex2_m2 = """
 Para Resolver siga os seguintes passos:\n
 para saber o que cada aluno recebeu de troco devemos\n
@@ -129,6 +130,7 @@ pelo número de alunos temos:\n
  que pressionando [S D] de novo temos o seguinte valor:\n
  R$ 20.74 que é o troco que cada aluno dessa turma deve receber.
 """
+
 so_ex2_m3 = """
 '''
 Vamos criar três variáveis
@@ -172,6 +174,7 @@ print('Troco cada Aluno = ', trocoTotal/40)
 Ou seja a resposta correta é: Letra "D"
 '''
 """
+
 so_ex2_m4 = """
 para resolver este exercício,  primeiro façamos o seguinte:\n
 
@@ -200,7 +203,9 @@ analisando as operações de cálculo você verá que\n
 a resposta para esta questão é v = 20.74.
 Ou seja: respsosta é letra "D"\n
 """
+
 so_ex3_m1 = "data/imagens/img-un1-so3-m1.png"
+
 so_ex3_m2 = """
 Sabemos que a letra C é uma fração que consiste no resto\n
 da soma das demais frações, e, ao somar a fração A + B + C\n
@@ -227,6 +232,7 @@ pressionando [=] resultará e aparecerá na tela 5/12\n
 se você seguiu todos os passos de forma coreta.\n
 Teremos, portanto como resposta letra "C".
 """
+
 so_ex3_m3 = """
 '''
 Queremos encontrar a fração que corresponde a C.
@@ -258,6 +264,7 @@ o C que encontramos é o que equivale à fração 5/12.
 Portanto a resposta é letra "C"
 '''
 """
+
 so_ex3_m4 = """
 Para resolver este exercício vamos criar três variáveis a, b e c.\n
 No campo de entrada digita a = 1/4\n
@@ -267,7 +274,6 @@ total de 120 apartamentos, portanto podemos continuar e\n
 Agora digite no campo de entrada c = 1 - a- b que você\n
 poderá notar que estes nomes de variáveis aparecerão\n
 com uma coloração diferente e visivel no painel da Janela de Álgebra\n
-pois já estão na memória deste atual software matemática.\n
-
+pois já estão na memória deste atual software matemática.\n\n
 Portanto a resposta é letra C: 5/12
 """

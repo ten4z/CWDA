@@ -40,7 +40,6 @@ class SolucaoCompButton(Button):
 
 class SolucaoM1Button(Button):
 	id_exercicio = NumericProperty(0)
-
 	def __init__(self, **kwargs):
 		super(SolucaoM1Button, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
@@ -150,8 +149,6 @@ Builder.load_file("gui/unidades.kv")
 class Sc_Unidade1(Screen):
 	campo_busca = ObjectProperty(None)
 	ex_solucao = StringProperty("")
-	
-
 	so_m1 = StringProperty("")
 	so_m2 = StringProperty("")
 	so_m3 = StringProperty("")
