@@ -227,5 +227,35 @@ pressionando [=] resultará e aparecerá na tela 5/12\n
 se você seguiu todos os passos de forma coreta.\n
 Teremos, portanto como resposta letra "C".
 """
-so_ex3_m3 = "Solução Exercício 3 método 3"
+so_ex3_m3 = """
+'''
+Queremos encontrar a fração que corresponde a C.
+No enunciado temos três frações A = 1/4, B=1/3
+e C que não sabemos o valor ainda. Portanto, 
+adicionando as variáveis de valores de ponto
+flutuante que corresponde às frações teremos.
+'''
+a = 1/4
+b = 1/3
+print("A = ", a)
+print("B = ", b)
+'''
+que vai retornar os valores aproximados em 
+ponto flutuante correspondente a cada fração
+que já atribuimos.
+Agora já podemos calcular o valor de C
+'''
+print("C = ", 1 - a - b)
+'''
+Se a linha abaixo retornar True, então nosso
+cálculo está correto.
+'''
+print(1 - a - b == 5/12)
+'''
+Que mesmo sendo um número com casas decimais
+podemos comparar estes valores e verificar que 
+o C que encontramos é o que equivale à fração 5/12. 
+Portanto a resposta é letra "C"
+'''
+"""
 so_ex3_m4 = "Solução Exercício 3 método 4"
