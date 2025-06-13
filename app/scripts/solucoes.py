@@ -200,3 +200,7 @@ analisando as operações de cálculo você verá que\n
 a resposta para esta questão é v = 20.74.
 Ou seja: respsosta é letra "D"\n
 """
+so_ex3_m1 = "data/imagens/img-un1-so3-m1.png"
+so_ex3_m2 = "Solução Exercício 3 método 2"
+so_ex3_m3 = "Solução Exercício 3 método 3"
+so_ex3_m4 = "Solução Exercício 3 método 4"
