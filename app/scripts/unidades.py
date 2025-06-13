@@ -137,20 +137,20 @@ class SolucaoM1Popup(Popup):
 	img = ObjectProperty(None)
 
 class SolucaoM2Popup(Popup): 
-	so_ex1_m2 = solucoes.so_ex1_m2 
+	pass
 
 class SolucaoM3Popup(Popup): 
-	so_ex1_m3 = solucoes.so_ex1_m3
+	pass
 
 class SolucaoM4Popup(Popup): 
-	so_ex1_m4 = solucoes.so_ex1_m4
+	pass
 
 Builder.load_file("gui/unidades.kv")
 
 class Sc_Unidade1(Screen):
 	campo_busca = ObjectProperty(None)
 	ex_solucao = StringProperty("")
-	so_ex1_m2 = StringProperty("")
+	
 
 	so_m1 = StringProperty("")
 	so_m2 = StringProperty("")

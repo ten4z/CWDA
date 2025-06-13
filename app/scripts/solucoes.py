@@ -258,4 +258,16 @@ o C que encontramos é o que equivale à fração 5/12.
 Portanto a resposta é letra "C"
 '''
 """
-so_ex3_m4 = "Solução Exercício 3 método 4"
+so_ex3_m4 = """
+Para resolver este exercício vamos criar três variáveis a, b e c.\n
+No campo de entrada digita a = 1/4\n
+depois digite b= 1/3\n
+Sabemos que a soma a + b + c = 1 que corresponde ao\n
+total de 120 apartamentos, portanto podemos continuar e\n
+Agora digite no campo de entrada c = 1 - a- b que você\n
+poderá notar que estes nomes de variáveis aparecerão\n
+com uma coloração diferente e visivel no painel da Janela de Álgebra\n
+pois já estão na memória deste atual software matemática.\n
+
+Portanto a resposta é letra C: 5/12
+"""
