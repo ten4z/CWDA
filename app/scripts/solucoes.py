@@ -94,6 +94,109 @@ Opcionalmente você pode acessar o arquivo diretamente no Software Geogebra.\n
 """
 
 so_ex2_m1 = "data/imagens/img-un1-so2-m1.png"
-so_ex2_m2 = "solução exercício 2 método 2"
-so_ex2_m3 = "solução exercício 2 método 3"
-so_ex2_m4 = "solução exercício 2 método 4"
+so_ex2_m2 = """
+Para Resolver siga os seguintes passos:\n
+para saber o que cada aluno recebeu de troco devemos\n
+fazer alguns cálculos que são o que se segue:\n
+para fins didáticos vamos usar variável na calculadora HP 300s+\n
+Para armazernar valores na memória de sua calculadora\n
+digite o número na calculadora, e em seguida,\n
+quando o número estiver visivel na tela \n
+pressione o botão [Shift] seguido de [RCL] assim:\n
+Assim digite o seguinte número: 2749.60 \n 
+em seguida pressione [Shift][RCL] em seguida escolha uma letra ALPHA\n
+pressionando o respectivo botão da letra assim: [A],\n
+que na tela haverá uma saída informando\n
+a direção do número para a variável de letra em que você informou,\n
+em seguida pressione igual que o número será\n
+armazenado na variável de memória de letra correspondente, aqui A.\n
+A = 2749.60\n
+D = 754.15 + 285.35 + 880.50\n
+que resoultou: D = R$ 1920\n
+em seguida pressione o botão [=] que você verá\n
+na tela de sua calculadora o seguinte valor: 1920\n 
+Sabemos pelo enunciado da questão que os alunos arrecadaram\n
+o valor de 2749.60 que agora podemos encontrar a diferença\n
+do valor com que os alunos pagaram a assim:\n
+A - D ou seja: 2749.60 - 1920 que resultou no seguinte valor\n
+uma fração com o valor 4148/5 e, pressionando o botão [S D]\n
+temos o seguinte valor para o total geral de troco:\n
+R$ 829.6 que é o total da sobra das despesas, ou seja, restou o troco\n
+que cada aluno vai receber, e dividindo este valor \n
+pelo número de alunos temos:\n
+ 829.6/40 = 4148/5/40 \n
+ = 1037/50 \n 
+ que pressionando [S D] de novo temos o seguinte valor:\n
+ R$ 20.74 que é o troco que cada aluno dessa turma deve receber.
+"""
+so_ex2_m3 = """
+'''
+Vamos criar três variáveis
+'''
+despesas = 0.0
+arrecadado = 0.0
+trocoTotal = 0.0
+'''
+sabemos que todos alunos arrecadaram
+o valor 2749.60 que excede ao total de 
+despesas da turma, então atribuimos:
+'''
+arrecadado= 2749.60
+'''
+Sabemos também os valores das despesas
+então atribuimos:
+'''
+despesas = 754.15 + 285.35 + 880.5
+'''
+Estes números já estão em variáveis do
+algoritmo e podemos saber seus valores:
+'''
+print("arrecadado = ", arrecadado)
+print("despesas = ", despesas)
+'''
+Agora podemos verificar quanto é o troco
+que faltar distribuir entre os alunos
+'''
+trocoTotal = arrecadado - despesas
+'''
+Que podemos saber quanto será:
+'''
+print("Troco total = ", trocoTotal)
+'''
+E agora dividindo este valor pela quantidade
+de alunos podemos saber quanto cada aluno
+vai receber de troco:
+'''
+print('Troco cada Aluno = ', trocoTotal/40)
+'''
+Ou seja a resposta correta é: Letra "D"
+'''
+"""
+so_ex2_m4 = """
+para resolver este exercício,  primeiro façamos o seguinte:\n
+
+• criamos a variável arrecadado no campo de entrada\n
+adicionando o seguinte comando: arrecadado = 2749.6\n
+em seguida pressionamos a tecla ENTER.\n\n
+
+Que cria na janela de álgebra a variável de \n
+objeto controle deslizante que não precisamos\n
+exibi-lo, consideramos aqui apenas seu valor que\n
+está lá na Janela de Álgebra em formato de fração.\n\n
+
+Façamos comandos semelhante ao passo dado\n
+da criação da primeira variável "arrecadado", mas,\n
+agora, para as demais variáveis que queremos\
+conforme os valores informados no enunciado: \n
+conjuntoMusical, enfeitesIgreja, salaDeBaile, atribuindo o respectivo\n
+valor para cada variável.\n\n
+
+• Lembre conforme consultando a cada variável\n
+com suas propriedades você verá que é possível fazer\n
+operações matemáticas e lógicas com as variáveis, além também\n
+de executar funções matemáticas presente nos módulos\n
+do software geogebra. Conferindo as operações e\n
+analisando as operações de cálculo você verá que\n
+a resposta para esta questão é v = 20.74.
+Ou seja: respsosta é letra "D"\n
+"""

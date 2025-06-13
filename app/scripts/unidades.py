@@ -113,18 +113,9 @@ class ExercicioPopup(Popup):
 			self.txt_enunciado.text = str(exercicio[4])
 			self.id_exercicio = exercicio[0]
 			self.txt_reposta_m1 = self.selecionar_resposta(exercicio[3])
-
-
-
 			#self.arquivo_imagem = str(exercicio[6])
-
 			sql = """SELECT  id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta FROM tb_respostas WHERE (id = ?)"""
-
-
-
 			self.cursor.execute(sql, (self.id_exercicio,))
-
-
 			rows = self.current_app.cursor.fetchall()
 			for conteudo in rows:
 				if conteudo[2] is not None: 
@@ -135,17 +126,9 @@ class ExercicioPopup(Popup):
 
 			s1 = SolucaoM1Button(text= "SM1")
 			s1.bind(on_release=self.btn_pop1)	
-			self.buttons_layout.add_widget(s1)
-		
-			
+			self.buttons_layout.add_widget(s1)					
 			s1.id_exercicio = self.id_exercicio
-			
-
-			
 				
-			
-			
-			
 class SolucaoCompPopup(Popup): 
 	pass 
 
