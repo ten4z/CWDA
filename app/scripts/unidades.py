@@ -21,7 +21,8 @@ class ImageView(BoxLayout):
 		super(ImageView, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
-		self.cursor = self.current_app.cursor		
+		self.cursor = self.current_app.cursor
+		self.source = self.imagem		
 
 class SelectableRecycleGridLayout(FocusBehavior, LayoutSelectionBehavior,
 				 RecycleGridLayout):
@@ -31,6 +32,7 @@ class SelectableButton(RecycleDataViewBehavior, Button):
 	def on_press(self):		
 		popup = ExercicioPopup(self)
 		popup.open() 
+		
 class SolucaoCompButton(Button):
 	def on_press(self):
 		pop_soc = SolucaoCompPopup()
@@ -38,15 +40,14 @@ class SolucaoCompButton(Button):
 
 class SolucaoM1Button(Button):
 	id_exercicio = NumericProperty(0)
+
 	def __init__(self, **kwargs):
 		super(SolucaoM1Button, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
-		self.cursor = self.current_app.cursor
-		
-	
-	def on_press(self):	
-				
+		self.cursor = self.current_app.cursor			
+
+	def on_press(self):					
 		pop_m1 = SolucaoM1Popup()
 		pop_m1.open() 
 
@@ -93,27 +94,26 @@ class ExercicioPopup(Popup):
 	def btn_pop2(self,  callback):		
 		pop = SolucaoM2Popup()							
 		pop.label_so1.text = self.txt_reposta_m1
-		
-
-		
+				
 	def selecionar_resposta(self, id_ex):
 		return "exercício2"
 
 	def __init__(self, obj, **kwargs):
-		super(ExercicioPopup, self).__init__(**kwargs)
-		
+		super(ExercicioPopup, self).__init__(**kwargs)		
 		self.current_app = App.get_running_app()
 		self.conexao = self.current_app.conexao
 		self.cursor = self.current_app.cursor						
 		sql = "SELECT  id, unidade, modulo, exercicio, enunciado, imagem, pagina FROM tb_exercicios WHERE (exercicio = ?) ORDER BY id ASC"""
 		self.cursor.execute(sql, (obj.text,))
-
 		exercicio = self.cursor.fetchone()
 		if exercicio is not None: 						
 			self.txt_enunciado.text = str(exercicio[4])
 			self.id_exercicio = exercicio[0]
-			self.txt_reposta_m1 = self.selecionar_resposta(exercicio[3])
-			#self.arquivo_imagem = str(exercicio[6])
+			self.txt_reposta_m1 = self.selecionar_resposta(exercicio[3])						
+			img = ImageView()
+			img.imagem = exercicio[5]
+			print(exercicio[5])
+			self.image_layout.add_widget(img)
 			sql = """SELECT  id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta FROM tb_respostas WHERE (id = ?)"""
 			self.cursor.execute(sql, (self.id_exercicio,))
 			rows = self.current_app.cursor.fetchall()
@@ -123,7 +123,6 @@ class ExercicioPopup(Popup):
 					self.current_app.scm.get_screen("sc_unidade1").so_m2 = conteudo[3]
 					self.current_app.scm.get_screen("sc_unidade1").so_m3 = conteudo[4]
 					self.current_app.scm.get_screen("sc_unidade1").so_m4 = conteudo[5]	
-
 			s1 = SolucaoM1Button(text= "SM1")
 			s1.bind(on_release=self.btn_pop1)	
 			self.buttons_layout.add_widget(s1)					
@@ -136,12 +135,6 @@ class SolucaoM1Popup(Popup):
 	so_ex1_m1 = StringProperty(None)
 	imagem = StringProperty("")
 	img = ObjectProperty(None)
-
-
-
-	
-	
-		
 
 class SolucaoM2Popup(Popup): 
 	so_ex1_m2 = solucoes.so_ex1_m2 
@@ -198,21 +191,11 @@ class Sc_Unidade1(Screen):
 		self.current_app.conexao.commit()
 
 	def inserir_respostas(self):
-
 		lista = data.data_respostas
-
 		for item in lista:			
 			respostas_data = (item[0], item[1], item[2], item[3], item[4],item[5])
-
 			self.current_app.cursor.execute("INSERT INTO tb_respostas(id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta) VALUES (?, ?, ?, ?, ?, ?)", respostas_data,)
-
-
-
-
-
 			self.current_app.conexao.commit()
-
-		
 
 	def inserir_modulos(self):
 		sql = "INSERT INTO tb_modulos(id_modulo, titulo, paginas) VALUES (1, 'Revisão do Ensino Fundamental', 4)"
@@ -221,7 +204,6 @@ class Sc_Unidade1(Screen):
 
 	def inserir_exercicios(self):		
 		lista = data.data_table
-
 		for item in lista:			
 			exercicios_data = (item[0], item[1], item[2], item[3], item[4], item[5], item[6])
 			self.current_app.cursor.execute("INSERT INTO tb_exercicios(id, unidade, modulo, imagem,exercicio, enunciado, pagina) VALUES (?, ?, ?, ?, ?, ?, ?)", exercicios_data)
@@ -255,10 +237,7 @@ class Sc_Unidade1(Screen):
 		self.current_app.cursor.execute("SELECT * FROM tb_respostas")
 		data = self.current_app.cursor.fetchall()
 		if len(data)==0 or data==None:
-			self.inserir_respostas()
-
-
-		
+			self.inserir_respostas()		
 
 class Sc_Unidade2(Screen):
 	pass
