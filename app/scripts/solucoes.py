@@ -201,6 +201,31 @@ a resposta para esta questão é v = 20.74.
 Ou seja: respsosta é letra "D"\n
 """
 so_ex3_m1 = "data/imagens/img-un1-so3-m1.png"
-so_ex3_m2 = "Solução Exercício 3 método 2"
+so_ex3_m2 = """
+Sabemos que a letra C é uma fração que consiste no resto\n
+da soma das demais frações, e, ao somar a fração A + B + C\n
+corresponde a unidade, ou seja A + B + C = 1 que no todo trata-se\n
+dos 120 apartamentos, então vamos para a calculadora:
+com sua calculadora ligada pressione [1] e depois [÷] e então [4]\n
+logo depois pressione [Shift] e então [RCL]\n
+seguido de [A] que sua calculadora vai mostrar uma seta apontando\n
+a fração 1/4 para a variável A, então pressione [=] igual\n
+agora vamos armazenar a segunda fração:
+[1] depois pressionamos [÷] e depois  [3] que vai exibir a fração\n
+na tela da calculadora em seguida com o valor 1/3 na tela pressione\n
+[Shift] e [RCL] seguida da variável ALPHA [B] então [=]\n
+que vai armazenar a variável B também na memória da calculadora\n
+agora sabemos que os 120 apartamentos corresponde na unidade,\n
+ou seja as fração A + B + C = 1, o total de apartamentos\n
+Pois bem, para sabermos o valor que corresponde à fração C\n
+fazemos a diferença: C = 1 - A - B, então com esta fórmula \n
+podemos encontrar o valor de C com a calculadora \n
+a expressão de comandos na calculadora fica da seguinte forma\n
+[1] depois [-] seguido de [ALPHA] e [A] e continua [-] e [ALPHA] [B]\n
+depois pressione igual que você verá o resultado dessa soma de frações:\n
+pressionando [=] resultará e aparecerá na tela 5/12\n
+se você seguiu todos os passos de forma coreta.\n
+Teremos, portanto como resposta letra "C".
+"""
 so_ex3_m3 = "Solução Exercício 3 método 3"
 so_ex3_m4 = "Solução Exercício 3 método 4"
