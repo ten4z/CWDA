@@ -335,3 +335,39 @@ Podemos também comparar no campo de entrada se n é inteiro.\n
 com a função ÉInteiro(x) que retorna false, o número\n
 não é inteiro, não é racional é irracional letra "D".
 """
+so_ex5_m1 = "data/imagens/img-un1-so5-m1"
+
+so_ex5_m2 = """
+Para resolver este exercício com auxílio da calculadora\n
+Científica, você pode adicionar a expressão toda na calculadora\n
+que ela fará a simplificação desses radicais e retornar\n
+o valor 8. Uma dica use o botão de raiz quadrada e separe\n
+cada parte interna com radical com [(] e [)], abrindo e\n 
+fechando parênteses, fazendo corretamente a expressão\n
+matemática na calculadora você terá como resultado o número 8.\n
+Ou seja, resposta letra "b" 8.
+"""
+
+so_ex5_m3 = """
+'''
+Podemos fazer o cálculo imediante no terminal de programação,\n 
+com linhas de código, então faça o seguinte. digite a seguinte\n
+fórmula matemática para o script encontrar a solução.\n
+'''
+n = (62 + (1 + (9)**0.5)**0.5)**0.5
+print(n)
+'''
+Que exibe, 8.0, ou seja n = 8.\n
+Resposta letra 'b' 8.
+'''
+"""
+so_ex5_m4 = """
+Podemos fazer o cálculo imediante no campo de Entrada,\n
+com linhas de código, então faça o seguinte. digite a seguinte\n
+fórmula matemática para o script encontrar a solução.\n
+
+n = (62 + (1 + (9)**0.5)**0.5)**0.5
+
+Que exibe, n = 8 na Janela de Álgebra, ou seja n = 8.\n
+Resposta letra 'b' 8.
+"""
