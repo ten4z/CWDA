@@ -280,7 +280,6 @@ Portanto a resposta é letra C: 5/12
 
 so_ex4_m1 = "data/imagens/img-un1-so4-m1"
 
-
 so_ex4_m2 = """
 Para resolver este exercício de forma explicativa\n
 Imagine um número q = a/b com a e b inteiros e b diferente de zero\n
@@ -292,6 +291,7 @@ informado no inunciado, pelo fato de que este número dado\n
 dadas as condições que temos que seja igual a raiz quadrada de 30.\n
 ou seja a resposta é "D" irracional.\n
 """
+
 so_ex4_m3 = """
 '''
 Queremos encontrar um número n tal que
@@ -335,7 +335,7 @@ Podemos também comparar no campo de entrada se n é inteiro.\n
 com a função ÉInteiro(x) que retorna false, o número\n
 não é inteiro, não é racional é irracional letra "D".
 """
-so_ex5_m1 = "data/imagens/img-un1-so5-m1.png"
+so_ex5_m1 = "data/imagens/img-un1-so5-m1.pngg"
 
 so_ex5_m2 = """
 Para resolver este exercício com auxílio da calculadora\n
@@ -361,6 +361,7 @@ Que exibe, 8.0, ou seja n = 8.\n
 Resposta letra 'b' 8.
 '''
 """
+
 so_ex5_m4 = """
 Podemos fazer o cálculo imediatamente no campo de Entrada,\n
 com linhas de código, então faça o seguinte. digite a seguinte\n
