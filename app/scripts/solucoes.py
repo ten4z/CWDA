@@ -335,7 +335,7 @@ Podemos também comparar no campo de entrada se n é inteiro.\n
 com a função ÉInteiro(x) que retorna false, o número\n
 não é inteiro, não é racional é irracional letra "D".
 """
-so_ex5_m1 = "data/imagens/img-un1-so5-m1"
+so_ex5_m1 = "data/imagens/img-un1-so5-m1.png"
 
 so_ex5_m2 = """
 Para resolver este exercício com auxílio da calculadora\n
