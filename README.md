@@ -38,5 +38,7 @@ Vamos explorar minhas cinco formas diferentes de Desenvolver Matemática:
 * Resolver todos os exercícios propostos no livro usando 
 uma Combinação dos quatro métodos previamentes listados - OPCIONAL: tarefa do aluno.
 
+Vamos usar a Calculadora Científica HP 300s+ para resolvermos exercícios.
+
 O Livro Adotado para o estudo deste projeto foi:<br>
 Dante Matemática Volume Único - Série Novo Ensino Médio. ISBN 8508093462
