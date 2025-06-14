@@ -363,9 +363,9 @@ Resposta letra 'b' 8.
 """
 
 so_ex5_m4 = """
-Podemos fazer o cálculo imediatamente no campo de Entrada,\n
-com linhas de código, então faça o seguinte. digite a seguinte\n
-fórmula matemática para o script encontrar a solução.\n
+Podemos fazer o cálculo imediatamente no campo de Entrada, \n
+como comando matemático, então faça o seguinte: Digite a seguinte\n
+fórmula matemática na área de entrada de fórmulas para encontrar a solução.\n
 
 n = (62 + (1 + (9)**0.5)**0.5)**0.5
 
