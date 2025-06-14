@@ -277,3 +277,61 @@ com uma coloração diferente e visivel no painel da Janela de Álgebra\n
 pois já estão na memória deste atual software matemática.\n\n
 Portanto a resposta é letra C: 5/12
 """
+
+so_ex4_m1 = "data/imagens/img-un1-so4-m1"
+
+
+so_ex4_m2 = """
+Para resolver este exercício de forma explicativa\n
+Imagine um número q = a/b com a e b inteiros e b diferente de zero\n
+você poderá procurar digitando uma grande variedade\n
+de números em sua calculadora para encontrar porém não\n
+vai conseguir um número q deste formato que seja igual ao número\n
+informado no inunciado, pelo fato de que este número dado\n
+é um número irracional, ou seja não existe esta fração\n
+dadas as condições que temos que seja igual a raiz quadrada de 30.\n
+ou seja a resposta é "D" irracional.\n
+"""
+so_ex4_m3 = """
+'''
+Queremos encontrar um número n tal que
+n seja igual a raiz quadrada de 30, e para isso
+podemos usar o operador ** para expoente que
+iremos encontrar a raiz quadra de 30 sendo
+o valor que queremos encontrar. Porém teremos
+duas opções, achar um inteiro ou encontrar um
+número de ponto flutuante, aqui se o número for
+de ponto flutuante e tiver infintas casas decimais
+que não é dízima periódica: não há um padrão de
+repetições númericas teremos um número irracional.
+então façamos o seguinte no editor de códigos
+'''
+
+n = 30 ** (0.5) # Raiz quadrada de 30
+print(n)
+
+'''
+Que exibiu um número que tem infinitas casas decimais\n
+e também não é dízima periódica. E para confirmarmos\n
+Que este número é irracional podemos digital type(n)\n
+que confirmemos que se trata de um número irracional\n
+ por não ser inteiro, pelo fato de que um número n tal que\n
+n dividido por outro número inteiro o resultado continua sendo inteiro.\n
+'''
+print(n, type(n))
+'''
+n não é integer, mas float, portanto isso explica n ser irracional.\n
+Resposta letra "D" irracional.
+'''
+"""
+so_ex4_m4 = """
+Pelo enunciado o número n é raiz quadrada de 30\n
+O número n não é inteiro, pois há infinitas casas decimais\n
+e, também não há um número q = n tal que\n
+q = a/b tal a e b seja inteiro com b diferente de zero que\n
+seja igual a raiz quadrada de 30, não é racional e\n
+também não é dizima periódica, ou seja n é irracional.\n
+Podemos também comparar no campo de entrada se n é inteiro.\n
+com a função ÉInteiro(x) que retorna false, o número\n
+não é inteiro, não é racional é irracional letra "D".
+"""
