@@ -37,3 +37,6 @@ Vamos explorar minhas cinco formas diferentes de Desenvolver Matemática:
 * Resolver os exercícios com Software Matemático; e Por fim,
 * Resolver todos os exercícios propostos no livro usando 
 uma Combinação dos quatro métodos previamentes listados - OPCIONAL: tarefa do aluno.
+
+O Livro Adotado para o estudo deste projeto foi:
+Dante Matemática Volume Único - Série Novo Ensino Médio. ISBN 8508093462
