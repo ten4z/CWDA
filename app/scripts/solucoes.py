@@ -350,7 +350,7 @@ Ou seja, resposta letra "b" 8.
 
 so_ex5_m3 = """
 '''
-Podemos fazer o cálculo imediante no terminal de programação,\n 
+Podemos fazer o cálculo imediatamente no terminal de programação,\n 
 com linhas de código, então faça o seguinte. digite a seguinte\n
 fórmula matemática para o script encontrar a solução.\n
 '''
@@ -362,7 +362,7 @@ Resposta letra 'b' 8.
 '''
 """
 so_ex5_m4 = """
-Podemos fazer o cálculo imediante no campo de Entrada,\n
+Podemos fazer o cálculo imediatamente no campo de Entrada,\n
 com linhas de código, então faça o seguinte. digite a seguinte\n
 fórmula matemática para o script encontrar a solução.\n
 
