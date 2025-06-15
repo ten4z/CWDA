@@ -407,17 +407,20 @@
 			ScrollView:				
 				do_scroll_y: True
 				scroll_y: 1
-				size_hint_y: 2	
-				size: 1, 2							
+				size_hint_y: 3.5	
+				size: 1, 3.5							
 				BoxLayout:		        
 					orientation: 'vertical'	
-					size_hint_y: 5.0
-					height: 5000						
+					size_hint_y: 10
+					height: 2000													   
 					Label:
-						text: app.root.get_screen("sc_unidade1").so_m4
-						halign: "left"
-						valign: "top"
-						text_size: self.width, None						
+						id: label_so1
+						text_size: self.size
+						halign: 'left'
+						valign: 'top'
+						size_hint: 1, 25.0
+						size: self.texture_size
+						text: app.root.get_screen("sc_unidade1").so_m4					
 		BoxLayout:
 			orientation: "horizontal"
 			size_hint_y: 0.2
