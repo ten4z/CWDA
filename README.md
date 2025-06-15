@@ -41,8 +41,9 @@ uma Combinação dos quatro métodos previamentes listados - OPCIONAL: tarefa do
 Detalhes técnicos deste Projeto:
 * Estou usando o Software Krita para escrever rascunhos em Imagem.
 * Estou usando a Calculadora Científica HP 300s+ para resolvermos exercícios.
-* Estou usando o Python 3 para resolver exercícios com Scripts
+* Estou usando o Python 3 para resolver exercícios com Scripts.
 * Estou usando o Software Matemática Geogebra 5.2 também.
-* O Livro Adotado neste projeto é: Dante Matemática Volume Único - Série Novo Ensino Médio. ISBN 8508093462
 * Framework em Python Kivy (recente)
+* O Livro Adotado neste projeto é: Dante Matemática Volume Único - Série Novo Ensino Médio. ISBN 8508093462
+
 
