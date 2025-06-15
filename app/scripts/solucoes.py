@@ -372,3 +372,19 @@ n = (62 + (1 + (9)**0.5)**0.5)**0.5
 Que exibe, n = 8 na Janela de Álgebra, ou seja n = 8.\n
 Resposta letra 'b' 8.
 """
+
+so_ex6_m1 = """
+solução exercício 6 pelo método 1
+"""
+
+so_ex6_m2 = """
+solução exercício 6 pelo método 2
+"""
+
+so_ex6_m3 = """
+solução exercício 6 pelo método 3
+"""
+
+so_ex6_m4 = """
+solução exercício 6 pelo método 4
+"""

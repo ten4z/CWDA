@@ -87,7 +87,7 @@ class ExercicioPopup(Popup):
 	def btn_pop1(self,  callback):		
 		pop = SolucaoM1Popup()							
 		pop.img.source = self.imagem
-		print(self.imagem)
+		
 
 	def btn_pop2(self,  callback):		
 		pop = SolucaoM2Popup()							
@@ -109,8 +109,7 @@ class ExercicioPopup(Popup):
 			self.id_exercicio = exercicio[0]
 			self.txt_reposta_m1 = self.selecionar_resposta(exercicio[3])						
 			img = ImageView()
-			img.imagem = exercicio[5]
-			print(exercicio[5])
+			img.imagem = exercicio[5]			
 			self.image_layout.add_widget(img)
 			sql = """SELECT  id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta FROM tb_respostas WHERE (id = ?)"""
 			self.cursor.execute(sql, (self.id_exercicio,))
