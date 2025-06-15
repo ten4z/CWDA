@@ -43,7 +43,7 @@ Detalhes técnicos deste Projeto:
 * Estou usando a Calculadora Científica HP 300s+ para resolvermos exercícios.
 * Estou usando o Python 3 para resolver exercícios com Scripts.
 * Estou usando o Software Matemática Geogebra 5.2 também.
-* Framework em Python Kivy (recente)
+* Framework em Python Kivy (recente).
 * O Livro Adotado neste projeto é: Dante Matemática Volume Único - Série Novo Ensino Médio. ISBN 8508093462
 
 
