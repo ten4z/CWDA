@@ -38,7 +38,11 @@ Vamos explorar minhas cinco formas diferentes de Desenvolver Matemática:
 * Resolver todos os exercícios propostos no livro usando 
 uma Combinação dos quatro métodos previamentes listados - OPCIONAL: tarefa do aluno.
 
-Vamos usar a Calculadora Científica HP 300s+ para resolvermos exercícios.
+Detalhes técnicos deste Projeto:
+* Estou usando o Software Krita para escrever rascunhos em Imagem.
+* Estou usando a Calculadora Científica HP 300s+ para resolvermos exercícios.
+* Estou usando o Python 3 para resolver exercícios com Scripts
+* Estou usando o Software Matemática Geogebra 5.2 também.
+* O Livro Adotado neste projeto é: Dante Matemática Volume Único - Série Novo Ensino Médio. ISBN 8508093462
+* Framework em Python Kivy (recente)
 
-O Livro Adotado para o estudo deste projeto foi:<br>
-Dante Matemática Volume Único - Série Novo Ensino Médio. ISBN 8508093462
