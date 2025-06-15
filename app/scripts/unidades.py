@@ -52,7 +52,6 @@ class SolucaoM1Button(Button):
 
 class SolucaoM2Button(Button):
 	def on_press(self):	
-
 		pop_m2 = SolucaoM2Popup()
 		pop_m2.open() 
 
