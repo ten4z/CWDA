@@ -278,7 +278,7 @@ pois já estão na memória deste atual software matemática.\n\n
 Portanto a resposta é letra C: 5/12
 """
 
-so_ex4_m1 = "data/imagens/img-un1-so4-m1"
+so_ex4_m1 = "data/imagens/img-un1-so4-m1.png"
 
 so_ex4_m2 = """
 Para resolver este exercício de forma explicativa\n
@@ -313,14 +313,16 @@ print(n)
 '''
 Que exibiu um número que tem infinitas casas decimais\n
 e também não é dízima periódica. E para confirmarmos\n
-Que este número é irracional podemos digital type(n)\n
+Que este número é irracional podemos digitar type(n)\n
 que confirmemos que se trata de um número irracional\n
- por não ser inteiro, pelo fato de que um número n tal que\n
-n dividido por outro número inteiro o resultado continua sendo inteiro.\n
+por não ser inteiro, logo "float" que aqui estabelecemos\n
+ sendo um número irracional.\n
 '''
 print(n, type(n))
 '''
-n não é integer, mas float, portanto isso explica n ser irracional.\n
+n não é integer, mas float, tem ponto decimal, com infinitas\n
+casas decimais, mas não é dízima periódica.\n
+portanto isso explica n ser irracional.\n
 Resposta letra "D" irracional.
 '''
 """
@@ -335,7 +337,7 @@ Podemos também comparar no campo de entrada se n é inteiro.\n
 com a função ÉInteiro(x) que retorna false, o número\n
 não é inteiro, não é racional é irracional letra "D".
 """
-so_ex5_m1 = "data/imagens/img-un1-so5-m1.pngg"
+so_ex5_m1 = "data/imagens/img-un1-so5-m1.png"
 
 so_ex5_m2 = """
 Para resolver este exercício com auxílio da calculadora\n
@@ -373,18 +375,334 @@ Que exibe, n = 8 na Janela de Álgebra, ou seja n = 8.\n
 Resposta letra 'b' 8.
 """
 
-so_ex6_m1 = """
-solução exercício 6 pelo método 1
-"""
+so_ex6_m1 = "data/imagens/img-un1-so6-m1.png"
 
 so_ex6_m2 = """
-solução exercício 6 pelo método 2
+Solução do Exercício 6 com a calcudora científica HP 300s+:\n
+Primeiro examinando o gráfico da imagem no enunciado temos \n
+a posição dos números na reta numérica. Ou seja para solucionarmos\n
+este exercício basta verificarmos se os números dados da alternativa\n
+de resposta estão na posição correta do gráfico, como segue:\n
+olhando inicialmente achamos que a solução correta é letra a, mas\n
+vamos analisar também as outras alternativas e comparar.\n
+Sabemos pelo gráfico, que A está entre -2 e -1 ou seja: -2 < A < -1 e\n
+assim, sabemos também que A é negativo. B está entre 0 e 1 positivo: \n
+e C está entre 1 e 2. Que assim podemos verificar que C não é pi.\n
+Para sabermos o valor de pi, sendo pi o símbolo π, podemos com a calculadora\n
+no modo 1: COMP digitar [SHIFT] [x10^x] [=] que como saída podemos \n
+verificar 3.1415 o valor numérico desta letra dada na alternativa d. \n
+Na letra "b" temos A = -15/10 = -1.5 B= -0.6 e C = √2, sabemos também \n
+o valor de √2 que no modo 1: COMP da calculadora resulta em aproximadamente 1.4142\n
+ou seja, já sabemos que esta alternativa está eliminada, pelo fato de que\n
+o número B deve ser positivo. E, a letra c também é eliminada\n
+pelo fato de que o número A deve ser negativo, e, da mesma forma,\n
+a alternativa d também é eliminada pelo fato de que o número A deve ser negativo\n
+e recorrendo ao modo 1: COMP da calculadora ao acionarmos a letra pi \n
+retorna um número maior que 2 que extrapola e é maior que os números dados do gráfico.\n
+Portanto, como resposta, resta confirmarmos que a solução é a alternativa "a".\n
 """
 
 so_ex6_m3 = """
-solução exercício 6 pelo método 3
+from math import pi
+'''
+Olhando inicialmente o gráfico da imagem
+dada no enunciado podemos imaginar que a
+resposta correta seja letra "a", mas vamos
+analisar as outras alternativas.
+'''
+A1 = -1.5 # variável do número 'A' da alternativa a
+B1 = 6/10 # variável do número 'B' da alternativa a
+C1 = 2**0.5 # variável do número 'C' da alternativa a
+
+print("A1 = ", A1)
+print("B1 = ", B1)
+print("C1 = ", C1)
+print("______________________________________________________")
+
+A2 = -15/10 # variável do número 'A' da alternativa b
+B2 = -0.6 # variável do número 'B' da alternativa b
+C2 = 2**0.5 # variável do número 'C' da alternativa b
+
+print("A2 = ", A2)
+print("B2 = ", B2)
+print("C2 = ", C2)
+print("______________________________________________________")
+
+A3 = 1.5 # variável do número 'A' da alternativa c
+B3 = 0.6 # variável do número 'B' da alternativa c
+C3 = 1.5 # variável do número 'C' da alternativa c
+
+print("A3 = ", A3)
+print("B3 = ", B3)
+print("C3 = ", C3)
+print("______________________________________________________")
+
+A4 = 1.5 # variável do número 'A' da alternativa d
+B4 = 2**0.5 # variável do número 'B' da alternativa d
+C4 = pi # variável do número 'C' da alternativa d
+
+print("A4 = ", A4)
+print("B4 = ", B4)
+print("C4 = ", C4)
+print("______________________________________________________")
+
+'''
+Com o seguinte comando podemos verificar
+que a alternativa "b" está incorreta, pelo
+fato de que o B2 é menor que 0
+'''
+print("B2 > 0 ? ", B2 > 0)
+'''
+Que resultou em False, ou seja:
+esta alternativa b está incorreta.
+Com o seguinte comando podemos verificar
+que c alternativa "b" está incorreta, pelo
+fato de que o B2 é menor que 0
+'''
+print("A3 < 0 ? ", A3 < 0)
+'''
+Que resultou em False, ou seja:
+esta alternativa b está incorreta
+Com o seguinte comando podemos verificar
+que c alternativa "b" está incorreta, pelo
+fato de que o B2 é menor que 0
+'''
+print("2 = pi ? ", 2 == C4)
+'''
+Que resultou em False, ou seja:
+esta alternativa b está incorreta.
+Ou seja, resultou como correta apenas a opção "a".
+Esta é a resposta da questão: letra "a"
+'''
 """
 
 so_ex6_m4 = """
-solução exercício 6 pelo método 4
+Podemos fazer o seguinte para solução desta questão:
+Vamos criar doze números um para cada valor dado nas alternativaszn
+para A, B, C e, D, respectivamente, que ficará assim:\n
+A1 = -1.5; B1 = 6/10; C1 = 2**0.5, faça de forma análoga para com\n
+os demais valores informado no enunciado. que na interface gráfica\n
+do software geogebra essas variáveis que inicializadas no campo de entrada\n
+serão listadas no canto esquerdo da tela da Janela de Álgebra\n
+vamos comparar cada valor informado com uma expressão lógica que\n
+verifica estes números para nós com apenas um comando para cada alternativa:\n
+(An >= (-2) && An <=(-1)) && (Bn >= (0) && Bn <=(1)) and ((Cn >= (1) and Cn <=(2)))\n
+Assim: digitando o comando acima atribuido a uma variavel da questão a, qa = formula\n
+para a alternativa a substituimos o n pelo número dado de cada alternativa\n
+e faça as demais alternativas b, c e d com os valores da respectiva alternativa.\n
+Analisando assim podemos verificar que a opção que exibir verdade para toda \n
+a expressão lógica será a correta\n
+que podemos verficar que apenas a alternativa a é correta.\n
+solução letra "a".
 """
+
+so_ex7_m1 = "data/imagens/img-un1-so7-m1.png"
+so_ex7_m2 = """
+A solução desta questão na calculadora HP 300s+ consiste\n
+nas seguintes em digitar no modo de operação 1: COMP a expressão\n
+dada no enunciado conforme se faz um cálculo manual, mas agora \n
+usando as funções de sua calculadora, lembre se de substituir\n
+a letra x da fórmula pelo valor 2/5 e siguir fazendo o cálculo normalmente\n
+com as demais funções de expoente, soma e divisão, que ao pressionar\n
+a tecla [=] você terá o valor de resposta: 9/25, ou seja, a resposta
+correta é letra 'b' 9/25.
+"""
+so_ex7_m3 = """
+'''
+Temos uma expressão matemática para
+resolver neste exercício. O interpretador
+desta linguagem de programação faz
+cálculos matemáticos com rapidez e precisão.
+então vamos criar uma função matemática
+e passar para ela o valor dado no enunciado.
+'''
+
+def exercicio7(x):
+    
+    print("x = ", x, " f(x) = ", x**2 + 1/5)
+
+'''
+Na linha abaixo chamamos o método e passamos
+um argumento com o valor de x.
+'''
+exercicio7(2/5)
+
+'''
+que retorna um número de ponto flutuante
+que tem como resposta 0.36, o mesmo valor da fração 9/25,
+ou seja, resposta: letra "b"
+'''
+"""    
+    
+so_ex7_m4 = """
+Para resolvermos esta questão vamos fazer o seguinte,\n
+primeiro no campo de Entrada digitamos o seguinte comando n = 2/5\n
+Em seguida digitamos a expressão atribuida ao valor q7:\n
+assim: q7 = n**2 + 1/5 que como resposta na Janela de Álgebra\n
+teremos o valor q7 = 9/25, portanto, resposta: letra 'b'.
+"""
+
+so_ex8_m1 = "data/imagens/img-un1-so8-m1.png" 
+so_ex8_m2 = """
+Seria interessante se nesta calculadora houvesse também uma função\n
+de expandir polinômio e fatorar expressões matemáticas.
+"""
+so_ex8_m3 = """
+
+'''
+Podemos testar uma função matemática
+se assume o mesmo valor da expressão dada,
+se ocorrer de os valores serem iguais
+podemos afirmar que a função pode ser a mesma,
+porém, fatorada.
+'''
+def verificarFuncao():
+    x = 5 #considere este número apenas para teste.
+    formula = "4*x**2 + 16*x + 16"
+    qfa = "(x + 4)**2"
+    qfb = "(2*x + 2)**2"
+    qfc = "(x + 4) * (x - 4)"
+    qfd = "4*((x + 2)**2)"
+
+    if eval(formula) ==  eval(qfa):
+        print("funcao a: sim, pode ser esta função")
+    else:
+        print("funcao a: não, função icorreta")
+
+    if eval(formula) ==  eval(qfb):
+        print("funcao b: sim, pode ser esta função")
+    else:
+        print("funcao b: não, função icorreta")
+
+    if eval(formula) ==  eval(qfc):
+        print("funcao c: sim, pode ser esta função")
+    else:
+        print("funcao c: não, função icorreta")
+
+    print(eval(formula)) # veja que esta formula funciona
+    print(eval(qfd)) # esta formula e a do enunciado são iguais
+    
+    if eval(formula) ==  eval(qfd):
+        print("funcao d: sim, pode ser esta função")
+    else:
+        print("funcao d: não, função icorreta")
+    '''
+    Veja que construimos uma função matemática
+    que está totalmente dinâmica assumindo o valor de x
+    resposta letra "d"
+    '''
+        
+verificarFuncao()
+"""
+so_ex8_m4 = """
+Para resolver esta questão com o software Geogebra \n
+vamos fazer o seguinte, crie uma função de nome fa com o \n
+seguinte valor no campo de entrada "fa = (x + 4)^2 \n
+Note que o geogebra plotou o desenho do gráfico da quadrática fa\n
+agora vamos para a segunda fórmula no campo de entrada "fb = (2*x + 2)^2" \n
+De fórmula análoga digite as seguintes outras fórmulas dadas na questão\n
+"fc = (x + 4)*(x - 4)"\n
+"fd = 4*(x + 2)^2"\n
+agora, por fim digite a função f que é a fórmula que queremos comparar,\n
+se o gráfico for o mesmo e a expressão matemática também ser a mesma\n
+então esta função é a mesma do enunciado, porém no modo fatorada.\n
+a função f dada no enunciado é f = 4*x^2 + 16*x + 16, você pode ocultar\n
+uma dessas duas, a fd ou a f junto com as demais que você verá que as \n
+funções fd e f são a mesma e na janela de visualização tem o gráfico sobreposto\n
+Opcionalmente você pode digitar no campo de entrada o seguinte comando \n
+fd == f [ENTER] que retorna "true", sendo assim, verificamos que \n
+a função da alternativa "d" é a mesma do enunciado.\n
+e assim vemos que a letra "d" é a alternativa correta.
+
+"""
+
+so_ex9_m1 = "data/imagens/img-un1-so9-m1.png" 
+so_ex9_m2 = """
+Trata-se de uma expressão algébrica, que com a calculadora não há \n
+uma forma de somar esta expressão por comandos próprios, portanto. \n
+as demais soluções respondem a esta questão.
+
+"""
+so_ex9_m3 = """
+
+'''
+Podemos testar uma função matemática
+se assume o mesmo valor da expressão dada,
+se ocorrer de os valores serem iguais
+podemos afirmar que a função pode ser a mesma,
+que equivale ao perímetro do quadrilátero.
+'''
+qfa = "6*x - 4"
+qfb = "4*x - 6"
+qfc = "-4*x**2 + x - 3"
+qfd = "x + 4"
+
+def verificarFuncao(expressao):
+    x = 5 #considere este número apenas para teste.
+    ladoA = "2*x + 1"
+    ladoB = "x - 3"
+    ladoC = "2*x + 1"
+    ladoD = "x - 3"
+    perimetro = eval(ladoA) + eval(ladoB)+ eval(ladoC)+ eval(ladoD)
+
+    print(perimetro)
+    print(eval(expressao))
+    
+    if perimetro ==  eval(expressao):
+        print("Sucesso, A expressão {} está correta.".format(expressao))
+    else:
+        print("Falha, a expressão {} não está correta.".format(expressao))
+    '''
+    Veja que construimos uma função matemática
+    que está totalmente dinâmica assumindo o valor de x
+    resposta letra "a"
+    '''
+        
+verificarFuncao(qfa)
+
+"""
+so_ex9_m4 = """
+A solução para este exercício consiste em desenhar um polígono\n
+com os pontos definidos dinâmicamente com a ferramenta controle deslizante\n
+Adicione um controle deslizante de nome vx com incremento de 0.1 e \n
+limites de 0 a 20, e adicione os vértices do quadrilátero que assume\n
+o valor vx para o lugar do tamanho dos lados, que são definidos os Pontos\n
+que contém a componentes definidas pelo controle deslizante dada a fórmula matemática\n
+em seguida desenhe o quadrilátero clicando no botão polígono\n
+em seguida selecione cada Ponto para definir o lado na ordem correta\n
+Você pode opcionalmente também calcular o perímetro do quadrilátero\n
+de várias formas para comparar a resposta da questão:\n
+ao digitar a fórmula Perímetro( <Polígono> ) em que o Texto <Polígono>\n
+você pode medir o perímetro do polígono e comparar se a soma dos lados\n
+é exatamente este mesmo valor em que se obteve com a função do Geogebra.\n
+assume o nome do quadrilátero exibido na Janela de Álgebra.\n
+Lembrando que para o cálculo correto de cada  lado do polígono \n
+deve calcular a fórmula com a função abs() de valor absoluto para cada lado.
+que assim, você poderá chegar na resposta correta: letra "a".
+"""
+
+so_ex10_m1 = "data/imagens/img-un1-so10-m1.png"
+so_ex10_m2 = """
+Vamos encontrar as raízes desta equação por Soma e Produto na Calculadora\n
+para isso vamos usar as variáveis de memória E, F, C e D para as raízes.\n
+E é a menor raiz e F é a maior raiz, C é o valor da soma das raízes\n
+que resulta nos coeficientes C = -b/a e D é o valor do produto das duas raízes\n
+agora estabelecemos C = -13/1 e D = 40/1
+e agora 
+Pela regra de soma e produto encontramos dois pares de números que satisfaz\n
+a regra à saber (5, 8) e (-5 e -8), mas devemos nos atentarmos para o sinal\n
+destes números, porque a soma dois dois resulta em 13 e -13, mas, ainda pela regra\n
+sabemos queo valor C é negativo, então nos resta a segunda opção em que as raízes\n
+são iguais a (-5, e -8) e agora comparando para termos certeza de que encontramos \n
+as reais raizes da equação fazemos a seguinte operação:
+
+"""
+so_ex10_m3 = """
+Solução com Python
+"""
+so_ex10_m4 = """
+Solução com Geogebra
+"""
+
+
+

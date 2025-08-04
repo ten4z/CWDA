@@ -71,19 +71,17 @@ class ExercicioPopup(Popup):
 	image_layout = ObjectProperty(None)	
 	buttons_layout = ObjectProperty(None)
 	arquivo_imagem = StringProperty("")
-	acc = ObjectProperty(None)
-	active_accordion = ObjectProperty(None)
+	
 	imagem = StringProperty("")
 	img_view = ObjectProperty(None)
 	txt_reposta_m1 = StringProperty("")
 	def __init__(self, **kwargs):
 		super(ExercicioPopup, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
-
-	def on_open(self):
-
+	'''
+	def on_open(self): # on open apenas para popups
 		self.acc.select(self.acc.children[1]) 
-
+	'''
 	def btn_pop1(self,  callback):		
 		pop = SolucaoM1Popup()							
 		pop.img.source = self.imagem
@@ -144,7 +142,9 @@ class SolucaoM4Popup(Popup):
 
 Builder.load_file("gui/unidades.kv")
 
-class Sc_Unidade1(Screen):
+
+class Sc_ReFundamental(Screen):
+	pass	
 	campo_busca = ObjectProperty(None)
 	ex_solucao = StringProperty("")
 	so_m1 = StringProperty("")
@@ -153,7 +153,7 @@ class Sc_Unidade1(Screen):
 	so_m4 = StringProperty("")
 
 	def __init__(self, **kwargs):
-		super(Sc_Unidade1, self).__init__(**kwargs)
+		super(Sc_ReFundamental, self).__init__(**kwargs)
 		self.current_app = App.get_running_app()
 
 	def on_enter(self): 
@@ -234,6 +234,8 @@ class Sc_Unidade1(Screen):
 		if len(data)==0 or data==None:
 			self.inserir_respostas()		
 
+class Sc_Unidade1(Screen):
+	pass
 class Sc_Unidade2(Screen):
 	pass
 
