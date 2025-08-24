@@ -708,7 +708,9 @@ resposta: letra "a".
 
 """
 so_ex10_m3 = """
-Solução com Python
+'''
+Vamos encontrar as raízes desta equação por script para Soma e Produto
+'''
 """
 
 so_ex10_m4 = """
