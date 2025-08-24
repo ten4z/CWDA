@@ -695,11 +695,22 @@ destes números, porque a soma dois dois resulta em 13 e -13, mas, ainda pela re
 sabemos queo valor C é negativo, então nos resta a segunda opção em que as raízes\n
 são iguais a (-5, e -8) e agora comparando para termos certeza de que encontramos \n
 as reais raizes da equação fazemos a seguinte operação:
+substituímos na expressão a primeira raiz que encontramos:\n
+(-5)² + 13*(-5) + 40 e continuando\n
+25 -65 + 40 =  65 -65 = 0, está correto, e agora com a segunda raiz\n
+(-8)² + 13*(-8) + 40 e continuando \n
+64 - 104 + 40 = 104 - 104, está correto, e,\n
+portanto: -5 e -8 são raizes da quadrática dada.\n
+e, para verificar a questão do enunciado temos:\n
+-5 (a maior) - (-8) (a menor) subtraindo a menor raiz da maior:\n
+-5 -(-8) = -5 + 8 = 3\n
+resposta: letra "a".
 
 """
 so_ex10_m3 = """
 Solução com Python
 """
+
 so_ex10_m4 = """
 Solução com Geogebra
 """
