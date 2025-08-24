@@ -80,9 +80,9 @@ e produzirmos produtos atrativos e de alta qualidade.\n
 [b]Visão: [/b]A excelência é desejável, trata-se de um costume praticado com constante aperfeiçoamento.\n
 [b]Valores: [/b]Mentoria, Gestão, Comunicação, Transparência, Sustentabilidade.\n
 [b]Website pessoal[/b]
-http://www.josielsoares.com\n
-[b]Link auto contido deste documento:[/b]\n http://www.josielsoares.com/documentos/politica-de-privacidade-cwda.html \n
-[b]Edição dia 14 de julho de 2025 | Josiel Soares. Gestor da Ziga Sistemas[/b]\n"""				
+http://www.zigamultimedia.tech\n
+[b]Link auto contido deste documento:[/b]\n http://www.zigamultimedia.tech/documentos/politica-de-privacidade-cwda.html \n
+[b]Edição dia 24 de agosto de 2025 | Josiel Soares. Gestor da Ziga Sistemas[/b]\n"""				
 	
 
 	def abrir_link(self, link):
