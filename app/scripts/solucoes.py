@@ -760,7 +760,15 @@ if __name__ == "__main__":
 """
 
 so_ex10_m4 = """
-Solução com Geogebra
+Solução com Software Geogebra\n
+Ao adicionar a fórmula da quadrática na Janela de àlgebra\n
+podemos ver o gráfico da função matemática "f" na\n
+Janela de visualização.\n
+Então adicionamos o segundo comando: Raiz(f)\n
+que o software geogebra cria dois Pontos A e B\n
+sendo A(-5, 0) e B(-8,0), ou seja as ráizes são -5 e -8\n
+e, subtraindo o menor número do maior temos:\n
+-5 - (-8) = 3, ou seja, a resposta é letra(a)\n
 """
 
 
