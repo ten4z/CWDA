@@ -770,6 +770,10 @@ sendo A(-5, 0) e B(-8,0), ou seja as ráizes são -5 e -8\n
 e, subtraindo o menor número do maior temos:\n
 -5 - (-8) = 3, ou seja, a resposta é letra(a)\n
 """
+so_ex11_m1 = "data/imagens/img-un1-so11-m1.png"
+so_ex11_m2 = "Solução método 2"
+so_ex11_m3 = "Solução método 3"
+so_ex11_m4 = "Solução método 4"
 
 
 
