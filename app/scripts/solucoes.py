@@ -773,7 +773,26 @@ e, subtraindo o menor número do maior temos:\n
 so_ex11_m1 = "data/imagens/img-un1-so11-m1.png"
 so_ex11_m2 = "Solução método 2"
 so_ex11_m3 = "Solução método 3"
-so_ex11_m4 = "Solução método 4"
+so_ex11_m4 = """
+Queremos saber a expressão matemática para\n
+encontrar o valor de x, portanto sabemos que com a área\n
+do terreno junto com a área, podemos encontrar a fórmula\n
+que estamos buscando. portanto, vamos calcular área total do terreno\n
+Queremos encontrar a área total do terreno,\n
+para isso, façamos o cálculo da área informada no enunciado.\n
+no Campo de Entrada digite:\n
+(5+2x)*(7+2x)=99. que temos a fórmula fatorada,\n
+para exibir o polinômio completo clique com o\n
+botão direito em cima da formula gerada\n
+e clique no item de menu flutuante \n
+Equação ax² + bxy + cy² + dx + ey = f\n
+que temos como fórmula a nova função f\n 
+que é f(x) = x² + 6x -16\n
+Agora, podemos criar uma função g(x) quadrática\n
+para a expressão que encontramos para área\n
+e fazendo raízes(g), temos como \n
+resposta (2, 0) e (-8, 0) o x deve ser positivo,\n
+e portanto x = 2 e como resposta temos letra(a)\n"""
 
 
 
