@@ -792,7 +792,7 @@ Agora, podemos criar uma função g(x) quadrática\n
 para a expressão que encontramos para área\n
 e fazendo raízes(g), temos como \n
 resposta (2, 0) e (-8, 0) o x deve ser positivo,\n
-e portanto x = 2 e como resposta temos letra(a)\n"""
+e portanto x = 2 e como resposta temos letra(b)\n"""
 
 
 
