@@ -831,5 +831,60 @@ e fazendo raízes(g), temos como \n
 resposta (2, 0) e (-8, 0) o x deve ser positivo,\n
 e portanto x = 2 e como resposta temos letra(b)\n"""
 
+so_ex12_m1 = "data/imagens/img-un1-so12-m1.png"
+so_ex12_m2 = """
+Podemos resolver este exercício de matemática utilizando Soma e Produto\n
+Ao modelar os dados podemos estabelecer a fórmula da quadrática\n
+E também consiste nas seguintes regras: o perímetro: 2l1 + 2l2 = 20m\n
+ou seja simplificando: \n
+I) l1+ l2 = 10m e a área do retângulo:\n
+II) l1 * l2 = 24m² que resulta na regra de Soma e Produto da quadrática\n
+ou Seja x1 + x2 = 10 e x1 * x2 = 24, e com a calculadora\n
+podemos comparar qual das alternativas satisfaz regra de soma e produto:\n
+letra a) 2 e 12 na calculadora: [2][+][12][=] \n
+resulta em 14 resultado que por (I) está incorreto\n
+letra b) 3 e 8 na calculadora [3][+][8][=] resulta em 11 por (I) está incorreta\n
+letra c) [3][*][7][=] resulta em 21 por (II) está incorreta\n
+letra d) [4][+][6][=] resulta em 10 que satisfaz,\n
+e comparando (II) temos [4][*][6][=] 24 que satisfaz também\n
+ou seja a alternativa "d" está correta.
+
+"""
+so_ex12_m3 = """
+class ExDoze():
+   expr1 = "x + y" #expressão da área total
+   expr2 = "x * y"
+   lista  = [(2, 12), (3,8), (3,7), (4,6)] #lista com a resposta
+   def verificar(self):
+      for ls in self.lista:
+         x = ls[0]
+         y = ls[1]
+
+         if eval(self.expr1)==10 and eval(self.expr2) == 24: #compara a fórmula
+            print(str(ls) + " é resposta")
+         else:
+            print(str(ls) + " não é resposta")
+ExDoze().verificar()
+'''
+Que além das outras saídas também imprime\n
+no terminal a seguinte mensagem: (4, 6) é resposta\n
+Ou seja resposta letra "d"
+'''
+
+"""
+so_ex12_m4 = """
+Podemos encontrar a fórmula matemática dados as informações
+do enunciado. Então temos duas fórmulas: x1 + x2 =10
+e x1 * x2 = 24 e isolando o x na primeira fórmula temos
+x2 = 10 -x1 e substituindo esta expressão na segunda fórmula temos:
+x1 * (10 - x1) = 24, que teremos a segunda fórmula matemática
+f(x) = x*(10-x) -24, que é a mesma fórmula de g(x) = -x^2+10x-24, 
+o software desenha o gráfico da quadrática
+e podemos ver as raízes onde a curva toca o eixo x:
+ou também acionando o comando Raízes(f)
+Que é criado os pontos A(4,0) e B(6,0)
+ou seja resposta: letra "d"
+"""
+
 
 
