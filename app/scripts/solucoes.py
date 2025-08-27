@@ -771,8 +771,45 @@ e, subtraindo o menor número do maior temos:\n
 -5 - (-8) = 3, ou seja, a resposta é letra(a)\n
 """
 so_ex11_m1 = "data/imagens/img-un1-so11-m1.png"
-so_ex11_m2 = "Solução método 2"
-so_ex11_m3 = "Solução método 3"
+so_ex11_m2 = """
+Podemos com papel e caneta expandir o polinômio \n 
+Que corresponde a àrea total do terreno\n
+que corresponde à seguinte função f(x) = x² + 6x -16\n
+então vamos substiuir os números localizados nas alternativas dadas\n
+no enunciada desta questão para ver se x é raiz da quadrática\n
+digitando para a letra a) 1m [1][x²][+][6][*][1][-][16]\n
+em seguida pressione [=] que o resultado será -9, \n
+ou seja: [1] não é raiz.
+digitando para a letra b) 2m [2][x²][+][6][*][2][-][16]\n
+em seguida pressione [=] que o resultado será 0, \n
+encontramos [2] que é raiz, vamos agora verificar os outros\n
+números também dados no enunciado da questão\n
+digitando para a letra c) 5m [5][x²][+][6][*][5][-][16]\n
+em seguida pressione [=] que o resultado será 39, \n
+5m não é x e também não é raiz da expressão matemática.\n
+e, por fim, vamos comparar a letra d) 8m:
+[8][x²][+][6][*][8][-][16] em seguida [=]\n
+que resulta em 96m que não é x.
+Ou seja a resposta para o enúnciado é x = 2m letra "b".
+"""
+so_ex11_m3 = """
+class ExOnze():
+   expr = "x**2 + 6*x -16" #expressão da área total
+   lista  = [1, 2, 5, 8] #lista com a resposta
+   def verificar(self):
+      for x in self.lista:
+         if eval(self.expr) == 0: #compara a fórmula
+            print(str(x) + " é raiz")
+         else:
+            print(str(x) + " não é raiz")
+
+ExOnze().verificar()
+'''
+Que como saída também mostrou no terminal a seguinte linha\n
+"2 é raiz" ou seja: x = 2m letra "b"
+'''
+"""
+
 so_ex11_m4 = """
 Queremos saber a expressão matemática para\n
 encontrar o valor de x, portanto sabemos que com a área\n
