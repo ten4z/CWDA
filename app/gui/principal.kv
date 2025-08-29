@@ -131,7 +131,8 @@
 		Accordion: 
 			id: acc_menu
 			size_hint: 0.48, 1 
-			AccordionItem:				
+			AccordionItem:	
+				title: "Menu"		
 				BoxLayout:
 					orientation: "vertical"
 					Button: 
@@ -155,6 +156,7 @@
 			AccordionItem:				
 				id: active_accordion
 				collapse: True
+				title: "Unidades"
 				ScrollView:
 					do_scroll_y: True
 					size_hint_y: 1
@@ -220,7 +222,8 @@
 							Button: 
 								text: "Sair da Aplicação"
 								on_release: app.stop()
-			AccordionItem:				
+			AccordionItem:
+				title: "Links"				
 				BoxLayout:
 					orientation: "vertical"
 					Button:
