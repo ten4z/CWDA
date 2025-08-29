@@ -50,6 +50,7 @@ class Sc_Politica(Screen):
 	pass
 
 class CWDA(App):
+	App.icon = "data/aplicacao/icon.png"
 	conexao = sqlite3.connect("media_data.db")
 	cursor = conexao.cursor()
 
