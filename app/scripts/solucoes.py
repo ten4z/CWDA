@@ -885,6 +885,40 @@ ou também acionando o comando Raízes(f)
 Que é criado os pontos A(4,0) e B(6,0)
 ou seja resposta: letra "d"
 """
+so_ex13_m1 = "Solução método 1"
+so_ex13_m2 = "Solução método 2"
+so_ex13_m3 = "Solução método 3"
+so_ex13_m4 = """
+I) Para construirmos um ângulo de 120 graus e alguns\n
+pontos previamente definidos, vamos criar um\n
+polígono regura de 6 lados.\n
+II) Com a ferramenta ângulo clique em três\n
+pontos adjacentes para você formar um
+ângulo de 120º com o primeiro losango.\n
+oculte os demais pontos e o polígono\n
+clicando no pequeno circulo preenchido\n
+da Janela de Álgebra.\n
+III) Com a ferramenta segmento você pode\n
+ligar os pontos para desenhar cada lada do primeiro\n
+losango, o de 120º\n
+IV) Com a ferramenta reta paralela crie retas paralelas\n
+aos dois lados que você conseguiu montar com os segmentos\n
+cada reta deve passar pelo ponto de extremidade do lado.\n
+V) Com a ferramenta ponto, crie um ponto para fixar a localização\n
+dos outros lados que restam e clique na intersecção das duas\n
+retas que você acabou de desenhar.\n
+VI) Para construir um ângulo de 150º, para o próximo\n
+polígono do enunciado, você pode usar \n
+um polígono regular de 12 lados\n
+VII) Para construir um ângulo de 60º você pode usar\n
+um polígono regular de 3 lados\n
+VIII) Para construir o quarto losango podemos usar um\n
+polígono regular de 4lados que obtemos um ângulo de 90º\n\n
+
+Com o suporte da ferramenta ângulo podemos verificar que\n
+os quatro ângulos internos dos losangos I e III são iguais\n
+(congruentes), e, portanto como resposta temos letra "d"\n
+"""
 
 
 
