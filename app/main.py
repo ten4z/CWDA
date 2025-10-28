@@ -76,14 +76,14 @@ e produzirmos produtos atrativos e de alta qualidade.\n
 [b]Contatos: [/b]Sabermos o telefone pessoal de contato de nossos usuários é interessante para podermos firmarmos parcerias de negócios bem como também podermos estabelecer um contato direto com nossos usuários além de identificarmos os interesses destes ao usarem nossos produtos e serviços.\n
 [b]Localização: [/b]Atrativo para sabermos o perfil do usuário da aplicação, direcionarmos conteúdo, produtos e serviços, e identificarmos abrangência e alcance da aplicação em determinados nichos e regiões.\n
 [b]Microfone: [/b]Nossa aplicação faz uso de tecnologia de identificação do texto para fala e conversão de fala para texto, portanto fazemos uso deste recurso para agregarmos funcionalidade na aplicação bem como melhorarmos nossa comunicação e melhoria de nossos produtos e serviços.\n
-[b]Missão, Visão e Valores da Ziga Sistemas[/b]\n
+[b]Missão, Visão e Valores de Ziga Sistemas[/b]\n
 [b]Missão: [/b]Entregar soluções estratégias de negócios baseadas em bases de dados.\n
 [b]Visão: [/b]A excelência é desejável, trata-se de um costume praticado com constante aperfeiçoamento.\n
-[b]Valores: [/b]Mentoria, Gestão, Comunicação, Transparência, Sustentabilidade.\n
+[b]Valores: [/b]Mentoria, Gestão, Comunicação, Inovação, Sustentabilidade.\n
 [b]Website pessoal[/b]
 http://www.zigamultimedia.tech\n
 [b]Link auto contido deste documento:[/b]\n http://www.zigamultimedia.tech/documentos/politica-de-privacidade-cwda.html \n
-[b]Edição dia 24 de agosto de 2025 | Josiel Soares. Gestor da Ziga Sistemas[/b]\n"""				
+[b]Edição dia 28 de outubro de 2025 | Josiel Soares - Cientista da Computação e Engenheiro de Dados[/b]\n"""				
 	
 
 	def abrir_link(self, link):
