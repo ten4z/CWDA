@@ -148,72 +148,88 @@
 	size_hint_x: 0.95
 	size_hint_y: 0.95
 	BoxLayout:
-		orientation: "horizontal"					
-		BoxLayout:		        
-			orientation: 'vertical'
+		orientation: "horizontal"
+		BoxLayout:
+			orientation: "vertical"
+			size_hint_x: 0.5
+
 			BoxLayout:
-				orientation: "vertical"
-				size_hint_y: 0.2
-				Label:
-					text: "Exercícios Propostos"
-					bold: True							
-			BoxLayout:		        
-				orientation: 'vertical'
-				size_hint_y: 1
-				ScrollView:					
-					do_scroll_y: True
-					scroll_y: 1
-					size_hint_y: 2	
-					size: 1, 2																	
+				orientation: "horizontal"					
+				BoxLayout:		        
+					orientation: 'vertical'
 					BoxLayout:
 						orientation: "vertical"
-						size_hint_y: 4
-						height: 800
+						size_hint_y: 0.2
 						Label:
-							text_size: self.size
-							halign: 'left'
-							valign: 'top'
-							size_hint: 1, 1
-							size: self.texture_size
-							text: "Solução Completa Exercício 1"
-							id: txt_enunciado					
-							bold: True
-				ScrollView:						
-					ScatterLayout:
-						size: 600, 600
-						size_hint: (None,None)
-						id: image_layout		
-			BoxLayout:
-				orientation: "horizontal"
-				size_hint_y: 0.2
-				SolucaoCompButton:
-					text: "Fazer Minha Solução"
-			BoxLayout:
-				orientation: "horizontal"							
-				size_hint_y: 0.2
-				BoxLayout:
-					orientation: "vertical"
-					id: buttons_layout
-				BoxLayout:
-					orientation: "vertical"	
-					SolucaoM2Button:		
-						text: "SM2"				
-				BoxLayout:
-					orientation: "vertical"	
-					SolucaoM3Button:
-						text: "SM3"
-				BoxLayout:
-					orientation: "vertical"
-					SolucaoM4Button:
-						text: "SM4"							
-			BoxLayout:
-				orientation: "horizontal"
-				size_hint_y: 0.2
-				Button: 
-					text: "Voltar ao Menu Anterior"
-					on_release: 
-						app.root.current = "sc_menu"
-						exercicios_popup.dismiss()
+							text: "Exercícios Propostos"
+							bold: True							
+					BoxLayout:		        
+						orientation: 'vertical'
+						size_hint_y: 1
+						ScrollView:					
+							do_scroll_y: True
+							scroll_y: 1
+							size_hint_y: 2	
+							size: 1, 2																	
+							BoxLayout:
+								orientation: "vertical"
+								size_hint_y: 4
+								height: 800
+								Label:
+									text_size: self.size
+									halign: 'left'
+									valign: 'top'
+									size_hint: 1, 1
+									size: self.texture_size
+									text: "Solução Completa Exercício 1"
+									id: txt_enunciado					
+									bold: True
+								
+					BoxLayout:
+						orientation: "horizontal"
+						size_hint_y: 0.2
+						SolucaoCompButton:
+							text: "Fazer Minha Solução"
+					BoxLayout:
+						orientation: "horizontal"							
+						size_hint_y: 0.2
+						BoxLayout:
+							orientation: "vertical"
+							id: buttons_layout
+						BoxLayout:
+							orientation: "vertical"	
+							SolucaoM2Button:		
+								text: "SM2"				
+						BoxLayout:
+							orientation: "vertical"	
+							SolucaoM3Button:
+								text: "SM3"
+						BoxLayout:
+							orientation: "vertical"
+							SolucaoM4Button:
+								text: "SM4"							
+					BoxLayout:
+						orientation: "horizontal"
+						size_hint_y: 0.2
+						Button: 
+							text: "Voltar ao Menu Anterior"
+							on_release: 
+								app.root.current = "sc_menu"
+								exercicios_popup.dismiss()
+		BoxLayout:
+			orientation: "vertical"
+			size_hint_x: 0.5
+
+			Label:
+				size_hint_y: 0.1
+				text: "Imagem Ilustrativa do Exercício"
+			ScrollView:						
+				ScatterLayout:
+					size: 600, 600
+					size_hint: (None, None)
+					id: image_layout
+
+					
 			
 
 <SolucaoCompPopup>:

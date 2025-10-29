@@ -90,7 +90,7 @@ http://www.zigamultimedia.tech\n
 		webbrowser.open(link)
 
 	def build(self):
-		Window.size = (853, 480) #landscape
+		Window.size = (1280, 720) #landscape
 		self.scm = Sc_Manager()		
 		return self.scm
 
