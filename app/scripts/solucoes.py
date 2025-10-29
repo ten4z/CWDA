@@ -998,6 +998,98 @@ os quatro ângulos internos dos losangos I e III são iguais\n
 
 
 so_ex14_m1 = "data/imagens/img-un1-so14-m1.png"
-so_ex14_m2 = "Solução método 2"
-so_ex14_m3 = "Solução método 3"
-so_ex14_m4 = "Solução método 4"
+so_ex14_m2 = """
+Há dois dois valores para os lados do retângulo, e, para que\n
+os lados sejam semelhantes, é necessário que os valores para\n
+dos lados x e y no retângulo menor sejam proporcionais aos lados\n
+dos retângulo maior, então usando sua calculadora vamos calcular\n
+agora o valor de x [50] [*] [(] [2] [÷] 5 [)] [=] que corresponde \n
+à medida do x para o segundo retângulo x = 50 * 0.4 = 20, e agora, \n
+para calcular o valor do lado y temos [150] [*] [(] [2] [÷] [5] [)] [=]\n
+que resulta em 60, ou seja y = 150 * 0.4 = 300 ÷ 5 = 60, \n
+e assim temos x = 20 e y = 60, está correta a alternativa 'b'.
+"""
+so_ex14_m3 = """
+class Exercicio14():
+    '''
+    Inicializando as medidas dos lados
+    '''
+    x2 = 50
+    y2 = 150
+    rz = 2/5
+    def encontrarLados(self):
+        '''
+        rz = 0.4 é a medida da razão de semelhança 2/5
+        '''
+        x = self.x2 * self.rz
+        y = self.y2 * self.rz
+        '''
+        E portanto temos os valores dos lados do segundo
+        retângulo menor que vale x, e y respectivamente:
+        '''        
+        print('Os lados medem x = ', x, 'm e y = ', y , 'm')
+        '''
+        Como você pode ver na saída acima temos que
+        x = 20m e y = 60m
+        E portanto a resposta correta é a alternativa 'b'.
+        '''
+Exercicio14().encontrarLados()
+"""
+so_ex14_m4 = """
+No geogebra criemos uma variável númerica sendo\n
+x2 = 50 e outra variável y2 = 150, estes são as medidas\n
+dos lados do retângulo maior, que agora podemos calcular\n
+a variável da razão de semelhança: no campo de Entrada\n
+digitamos rz = 2/5, que na Janela de Álgebra fixa o valor\n
+de rz sendo igual a 0.4, agora podemos calcular o valor de x e y\n
+que são as medidas dos lados de mesmo nome do retângulo menor\n
+temos então assim no campo de Entrada.\n
+x1 = x2 * rz, que fixa x1 sendo o lado x com o valor 20\n
+e em seguida y1 = y2 * rz que resulta em y1 = y = 60\n
+e, portanto, temos os valor x = 20 e y = 60 as medidas
+dos lados proporcionais ao retângulo maior, ou seja\n
+resposta letra 'b)' x e y valem 20 m e 60 m respectivamente.
+"""
+
+so_ex15_m1 = "data/imagens/img-un1-so15-m1.png"
+so_ex15_m2 = """
+Com a calculadora científica podemos aplicar um cálculo\n
+de proporção por semelhança de triângulos, temos dois triângulos
+retângulos que representam a altura e tamanho da sombra do prédio
+e um segundo triângulo retângulo que corresponde à altura e sombra de 
+um poste, e por tanto os lados de mesmo nome são proporcionais, 
+x / 40 = 2 / 5
+x = (2 / 5) * 40
+ou seja, a altura x do prédio está para 40 "sombra do prédio"
+assim como 2 "a altura do poste" está para 5
+e resolvendo esta equação acima teremos o valor correspondente de x
+fazendo este cálculo na calculadora saberemos o valor de x, 
+ou seja [(] [2] [÷] [5] [)] [*] [40] [=]
+que resulta em x = 16 metros
+portanto a resposta correta é letra 'd'.
+"""
+so_ex15_m3 = """
+class Exercicio15(): 
+    def alturaPredio(self):
+        "Modelando a equação do enunciado teremos: "
+        x = (2/5) * 40
+        print("O predio tem ", x, " metros de altura.")
+        '''
+        Que resulta em x = 16m, ou seja: resposta letra 'd'
+        '''
+Exercicio15().alturaPredio()
+"""
+so_ex15_m4 = """
+No Geogebra vamos calcular a altura do prédio assim:
+No campo de Entrada digitamos s1 = 40, que fixa na Janela de Álgebra
+s1 = 40 para a sombra do prédio, e agora, s2 = 5, para a sombra do poste,
+x não sabemos mas para x2 sendo a altura do poste digitemos x2 = 2 metros,
+que fixa também x2 para a altura do poste.
+agora modelando a equação por semelhança de triângulos, pois
+temos dois triângulos retângulos e sabemos as medidas dos outros lados
+restando assim saber o valor da altura x do prédio então sabemos que
+x será o valor x1 da expressão matemática:
+x1 = (x2/s2) * s1 ou seja a altura x = (2/5) * 40
+em seguida pressionamos enter que teremos a altura x1 = x = 16 metros
+ou seja, a resposta correta é letra 'd'
+"""
