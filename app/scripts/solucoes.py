@@ -922,3 +922,7 @@ os quatro ângulos internos dos losangos I e III são iguais\n
 
 
 
+so_ex14_m1 = "data/imagens/img-un1-so14-m1.png"
+so_ex14_m2 = "Solução método 2"
+so_ex14_m3 = "Solução método 3"
+so_ex14_m4 = "Solução método 4"
