@@ -886,8 +886,83 @@ Que é criado os pontos A(4,0) e B(6,0)
 ou seja resposta: letra "d"
 """
 so_ex13_m1 = "data/imagens/img-un1-so13-m1.png"
-so_ex13_m2 = "Solução método 2"
-so_ex13_m3 = "Solução método 3"
+so_ex13_m2 = """
+Para solução usando a calculadora científica vamos\n
+partir da ideia que os losangos possuem quatro lados\n
+e todos lados congruentes: "angulos iguais ou proporcionais"\n
+na mesma direção, então vamos considerar também que a soma\n
+dos ângulos internos dos losangos mede 360°, então com\n
+a calculadora científica vamos comparar as quatro opções:\n
+a) I e II: [120] + [60] [=] [180] dois ângulos opostos medem 120°\n
+e os outros dois ângulos opostos medem 60° façamos o seguinte cálculo:\n
+ [120] [+] [60] [+] [120] [+] [60] [=] [360] e assim I e II\n
+está incorreto, porquê o segundo ângulo dado mede 150° e o terceiro\n
+ângulo só poderia valer [30°]
+b) II e III: o primeiro ângulo mede 150° e o segundo ângulo deverá\n
+medir 30° porque [150] [+] [30] [+] [150] [+] [30] [=] [360], então\n
+esta alternativa está incorreta porque na terceira imagem podemos ver\n
+que o ângulo dado mede 60° e assim, o outro lado deveria medir 120°\n
+que esta figura é incongruente com a do segundo losango.\n
+c) II e IV: Na figura na imagem IV temos um losango reto: os lados\n
+internos medem 90° e na figura II não é um losango reto: os lados \n
+são diferentes de 90°, ou seja esta alternativa está incorreta.\n
+d) I e III: Esta alternativa está correta, porque os lados são proporcionais\n
+e todos os ângulos de mesma direção são congruentes.Ou seja\n
+no losango I um ângulo mede 120° e o outro ângulo seguinte deve valer então 60°\n
+o que é semelhante ao losango II pois há na imagem o ângulo de 60°\n
+e intuitivamente podemos afirmar que o outro ângulo oposto ao dado na\n
+figura IV vale 60° restando o ângulo seguinte medindo 120°, que está correto.\n
+
+
+"""
+so_ex13_m3 = """
+class LosangosEx13():
+    '''
+    Criamos a lista do dicionário com os ângulos e medida dos lados:
+    '''
+    dados =  [{"l1": [120, 2]}, {"l2": [150, 2]}, {"l3": [60, 3]}, {"l4": [90, 3]}]
+    '''
+    Criamos o método para calcular o ângulo e verficiar a alternativa correta
+    chamando o método verificar proporsão:
+    '''
+    def preeencherLosango(self):
+        ax1 = self.dados[0]["l1"][0]
+        ay1 = self.dados[1]["l2"][0]
+        az1 = self.dados[2]["l3"][0]
+        aw1 = self.dados[3]["l4"][0]
+        '''
+        Para saber a medida do ângulo do outro lado:
+        '''
+        ax2 = 180 - ax1
+        ay2 = 180 - ay1
+        az2 = 180 - az1
+        aw2 = 180 - aw1          
+        '''
+        Passamos como parâmetro cada ângulo para identificarmos a
+        alternativa correta.
+        '''
+        if self.verificarProporsao(ax1, ax2, ay1, ay2):
+            print("A alternativa 'a' está correta")
+            
+        if self.verificarProporsao(ay1, ay2, az1, az2):
+            print("A alternativa 'b' está correta")
+            
+        if self.verificarProporsao(ay1, ay2, aw1, aw2):
+            print("A alternativa 'c' está correta")
+            
+        if self.verificarProporsao(ax1, ax2, az1, az2):
+            print("A alternativa 'd' está correta")
+        
+    def verificarProporsao(self, a1, a2, x1, x2):
+        '''
+        Se estiver correto os calculos abaixo teremos como
+        verdadeiro a alternativa correta.
+        '''
+        if (a1 + a2 + x1 + x2 == 360):
+            if (a1 == x1 and a2 == x2) or ((a1 == x2 and a2 == x1)):
+                return True
+LosangosEx13().preeencherLosango()
+"""
 so_ex13_m4 = """
 I) Para construirmos um ângulo de 120 graus e alguns\n
 pontos previamente definidos, vamos criar um\n
