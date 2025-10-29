@@ -1054,19 +1054,19 @@ resposta letra 'b)' x e y valem 20 m e 60 m respectivamente.
 so_ex15_m1 = "data/imagens/img-un1-so15-m1.png"
 so_ex15_m2 = """
 Com a calculadora científica podemos aplicar um cálculo\n
-de proporção por semelhança de triângulos, temos dois triângulos
-retângulos que representam a altura e tamanho da sombra do prédio
-e um segundo triângulo retângulo que corresponde à altura e sombra de 
-um poste, e por tanto os lados de mesmo nome são proporcionais, 
-x / 40 = 2 / 5
-x = (2 / 5) * 40
-ou seja, a altura x do prédio está para 40 "sombra do prédio"
-assim como 2 "a altura do poste" está para 5
-e resolvendo esta equação acima teremos o valor correspondente de x
-fazendo este cálculo na calculadora saberemos o valor de x, 
-ou seja [(] [2] [÷] [5] [)] [*] [40] [=]
-que resulta em x = 16 metros
-portanto a resposta correta é letra 'd'.
+de proporção por semelhança de triângulos, temos dois triângulos\n
+retângulos que representam a altura e tamanho da sombra do prédio\n
+e um segundo triângulo retângulo que corresponde à altura e sombra de \n
+um poste, e por tanto os lados de mesmo nome são proporcionais, \n
+x / 40 = 2 / 5\n
+x = (2 / 5) * 40\n
+ou seja, a altura x do prédio está para 40 "sombra do prédio"\n
+assim como 2 "a altura do poste" está para 5\n
+e resolvendo esta equação acima teremos o valor correspondente de x\n
+fazendo este cálculo na calculadora saberemos o valor de x, \n
+ou seja [(] [2] [÷] [5] [)] [*] [40] [=]\n
+que resulta em x = 16 metros\n
+portanto a resposta correta é letra 'd'.\n
 """
 so_ex15_m3 = """
 class Exercicio15(): 
@@ -1080,16 +1080,16 @@ class Exercicio15():
 Exercicio15().alturaPredio()
 """
 so_ex15_m4 = """
-No Geogebra vamos calcular a altura do prédio assim:
-No campo de Entrada digitamos s1 = 40, que fixa na Janela de Álgebra
-s1 = 40 para a sombra do prédio, e agora, s2 = 5, para a sombra do poste,
-x não sabemos mas para x2 sendo a altura do poste digitemos x2 = 2 metros,
-que fixa também x2 para a altura do poste.
-agora modelando a equação por semelhança de triângulos, pois
-temos dois triângulos retângulos e sabemos as medidas dos outros lados
-restando assim saber o valor da altura x do prédio então sabemos que
-x será o valor x1 da expressão matemática:
-x1 = (x2/s2) * s1 ou seja a altura x = (2/5) * 40
-em seguida pressionamos enter que teremos a altura x1 = x = 16 metros
-ou seja, a resposta correta é letra 'd'
+No Geogebra vamos calcular a altura do prédio assim:\n
+No campo de Entrada digitamos s1 = 40, que fixa na Janela de Álgebra\n
+s1 = 40 para a sombra do prédio, e agora, s2 = 5, para a sombra do poste,\n
+x não sabemos mas para x2 sendo a altura do poste digitemos x2 = 2 metros,\n
+que fixa também x2 para a altura do poste.\n
+agora modelando a equação por semelhança de triângulos, pois\n
+temos dois triângulos retângulos e sabemos as medidas dos outros lados\n
+restando assim saber o valor da altura x do prédio então sabemos que\n
+x será o valor x1 da expressão matemática:\n
+x1 = (x2/s2) * s1 ou seja a altura x = (2/5) * 40\n
+em seguida pressionamos enter que teremos a altura x1 = x = 16 metros\n
+ou seja, a resposta correta é letra 'd'\n
 """
