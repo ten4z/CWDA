@@ -885,7 +885,7 @@ ou também acionando o comando Raízes(f)
 Que é criado os pontos A(4,0) e B(6,0)
 ou seja resposta: letra "d"
 """
-so_ex13_m1 = "Solução método 1"
+so_ex13_m1 = "data/imagens/img-un1-so13-m1.png"
 so_ex13_m2 = "Solução método 2"
 so_ex13_m3 = "Solução método 3"
 so_ex13_m4 = """
