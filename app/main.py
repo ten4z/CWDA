@@ -2,13 +2,14 @@ from kivy.app import App
 from kivy.lang.builder import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import ObjectProperty
-import scripts.unidades as unidades
 import sqlite3
 import webbrowser
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.lang.builder import Builder 
 from kivy.core.window import Window
+
+import scripts.unidades as unidades
 
 Builder.load_file("gui/principal.kv")
 

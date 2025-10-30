@@ -12,7 +12,7 @@ from kivy.lang.builder import Builder
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, ListProperty, NumericProperty
-import scripts.solucoes as solucoes
+
 import scripts.data as data
 
 class ImageView(BoxLayout):
@@ -185,21 +185,47 @@ class Sc_ReFundamental(Screen):
 		self.current_app.cursor.execute(sql)
 		self.current_app.conexao.commit()
 
-	def inserir_respostas(self):
-		lista = data.data_respostas
-		for item in lista:			
+	def inserir_respostas(self):	
+		lista1 = data.data_resp_01_10
+		for item in lista1:			
 			respostas_data = (item[0], item[1], item[2], item[3], item[4],item[5])
 			self.current_app.cursor.execute("INSERT INTO tb_respostas(id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta) VALUES (?, ?, ?, ?, ?, ?)", respostas_data,)
 			self.current_app.conexao.commit()
 
+		self.current_app.cursor.execute("SELECT id FROM tb_respostas")
+		unidades1 = self.current_app.cursor.fetchall()
+		
+		
+		if len(unidades1)==0 or unidades1==None:
+			self.inserir_unidades()
+
+		lista2 = data.data_resp_11_20
+		for item in lista2:			
+			respostas_data = (item[0], item[1], item[2], item[3], item[4],item[5])
+			self.current_app.cursor.execute("INSERT INTO tb_respostas(id, id_exercicio, imagem_resposta, calculadora_resposta, codigo_resposta,  software_resposta) VALUES (?, ?, ?, ?, ?, ?)", respostas_data,)
+			self.current_app.conexao.commit()
+
+		self.current_app.cursor.execute("SELECT id FROM tb_respostas")
+		unidades2 = self.current_app.cursor.fetchall()
+		
+		
+		if len(unidades2)==0 or unidades2==None:
+			self.inserir_unidades()
+		
 	def inserir_modulos(self):
 		sql = "INSERT INTO tb_modulos(id_modulo, titulo, paginas) VALUES (1, 'Revisão do Ensino Fundamental', 4)"
 		self.current_app.cursor.execute(sql)
 		self.current_app.conexao.commit()
 
 	def inserir_exercicios(self):		
-		lista = data.data_table
-		for item in lista:			
+		lista1 = data.data_table_01_10
+		for item in lista1:			
+			exercicios_data = (item[0], item[1], item[2], item[3], item[4], item[5], item[6])
+			self.current_app.cursor.execute("INSERT INTO tb_exercicios(id, unidade, modulo, imagem,exercicio, enunciado, pagina) VALUES (?, ?, ?, ?, ?, ?, ?)", exercicios_data)
+			self.current_app.conexao.commit()
+
+		lista2 = data.data_table_11_20
+		for item in lista2:			
 			exercicios_data = (item[0], item[1], item[2], item[3], item[4], item[5], item[6])
 			self.current_app.cursor.execute("INSERT INTO tb_exercicios(id, unidade, modulo, imagem,exercicio, enunciado, pagina) VALUES (?, ?, ?, ?, ?, ?, ?)", exercicios_data)
 			self.current_app.conexao.commit()
