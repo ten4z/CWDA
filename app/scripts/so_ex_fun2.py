@@ -346,6 +346,31 @@ podemos verificar esta última fórmula que obtemos\n
 Ou seja, resposta letra 'c'
 """
 so_ex16_m3 = """
+Para modelar este exercício você pode comparar os três\n
+terenos e então você irá encontrar as relações entre os terrenos\n
+usando proporções e usando as medidas que estão disponíveis no\n
+exercício para poder encontrar as equações e relações possíveis.\n
+use a calculadora para simplificar a fração e encontrar a resposta:\n
+o lado 'z' de frente à rua das rosas mede 32 metros.
 """
 so_ex16_m4 = """
+Para resolvermos este problema de geometria\n
+podemos aplicar proporções para encontrarmos a\n
+medida do lado 'z'\n
+vamos encontrar duas equações fracionárias já\n 
+que as medidas são proporcionais pois estão\n
+na mesma direção: 'a rua' sendo a rua reta até o limite\n
+de encontro com as outras ruas, então façamos assim:\n
+observando os terrenos i e iii temos\n
+1) y/x = 15/20 ou seja o lado y do terreno está \n
+para o lado x “frente com a rua das rosas” assim como\n
+o que mede 15 metros do terreno iii está para o lado\n
+que mede 20 metros: frente para a rua das rosas \n
+e isolando, e simplificando a fração temos: x = 4y/3 \n
+e semelhantemente podemos continuar com o terren o i e ii:\n
+2) y/x = 24/z leia assim: y está para x assim como 24 está para z\n
+substituindo a equação 1 em 2 e isolando o z temos:\n
+z = 24x/y e continuando:\n
+24x/y = 24*(4y/3)/y e resolvendo esta equação matemática\n
+teremos que z é igual a 32 \n
 """
